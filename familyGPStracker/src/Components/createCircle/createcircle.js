@@ -71,7 +71,7 @@ class CreateCircle extends Component {
             let userCircle = {
                 uname: this.state.familyTapp.fname,
                 name: this.state.circleName,
-                members: []
+                members: [uid]
             }
             console.log(userCircle)
 

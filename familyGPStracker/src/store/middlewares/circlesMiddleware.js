@@ -16,7 +16,7 @@ export class CircleMiddleware {
             // console.log(users)
             firebase.database().ref(`Circles/${key}`).set(users)
                 .then((user) => {
-                    firebase.database().ref(`Circles/${key}/members`).push(member)
+                    // firebase.database().ref(`Circles/${key}/members`).push(member)
 
                     Toast.show({
                         text: 'Circle Successfully Create !',
@@ -53,11 +53,11 @@ export class CircleMiddleware {
                 }
                 console.log(array)
 
-                array.map((v, i) => {
-                    return 
-                    })
-                })
-                // dispatch(CirclesAction.getAllCircles(array));
+                // array.map((v, i) => {
+                //     return 
+                //     })
+                // })
+                dispatch(CirclesAction.getAllCircles(array));
             })
         }
     }
@@ -67,6 +67,7 @@ export class CircleMiddleware {
             let joinCode = code;
             let user = member
             let circleKey = ''
+            let array = []
 
             firebase.database().ref('/Circles/').on('value', (data) => {
                 let userData = data.val();
@@ -78,6 +79,7 @@ export class CircleMiddleware {
                     console.log(value)
                     if (value.key == joinCode) {
                         circleKey = value.mainKey
+                        array = value.members
                         Toast.show({
                             text: 'Circle Join Successfully!',
                             position: 'bottom',

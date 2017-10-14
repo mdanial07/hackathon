@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Container, Header, Left, List, ListItem, Thumbnail, Body, Right, Button, Title } from 'native-base';
 import axios from 'axios'
 import Icon from 'react-native-vector-icons/FontAwesome';
-
+import MapView from "react-native-maps"
 function mapDispatchToProps(dispatch) {
     return {
 
@@ -28,35 +28,35 @@ class Maps extends Component {
     }
 
     componentWillMount() {
-        // navigator.geolocation.getCurrentPosition((pos) => {
-        //   console.log(pos.coords)
-        //   var crd = pos.coords;
-        //   console.log(crd.latitude)
-        //   this.setState({
-        //     latitude: crd.latitude,
-        //     longitude: crd.longitude
-        //   })
-        // },
-        //   (err) => {
-        //     alert('check your network conectivity and location or gps')
-        //   }),
-        //   () => {
-        //     var options = {
-        //       enableHighAccuracy: true,
-        //       timeout: 5000,
-        //       maximumAge: 0
-        //     };
-        //   }
-        // axios.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=24.8871,67.0371&radius=500&key=AIzaSyB1frgnPYvJ4N4q2kjHoKk8rnC2VYfKhr4')
-        //     .then((responce) => {
-        //         console.log(responce)
-        //         var abc = responce.data.results
-        //         console.log(abc)
-        //     })
-        // this.setState({
-        //     latitude: 24.8788,
-        //     longitude: 67.0408
-        // })
+        navigator.geolocation.getCurrentPosition((pos) => {
+          console.log(pos.coords)
+          var crd = pos.coords;
+          console.log(crd.latitude)
+          this.setState({
+            latitude: crd.latitude,
+            longitude: crd.longitude
+          })
+        },
+          (err) => {
+            alert('check your network conectivity and location or gps')
+          }),
+          () => {
+            var options = {
+              enableHighAccuracy: true,
+              timeout: 5000,
+              maximumAge: 0
+            };
+          }
+        axios.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=24.8871,67.0371&radius=500&key=AIzaSyB1frgnPYvJ4N4q2kjHoKk8rnC2VYfKhr4')
+            .then((responce) => {
+                console.log(responce)
+                var abc = responce.data.results
+                console.log(abc)
+            })
+        this.setState({
+            latitude: 24.8788,
+            longitude: 67.0408
+        })
     }
 
 
@@ -66,9 +66,9 @@ class Maps extends Component {
 
     render() {
         return (
-            <View style={styles.container}>
-                <Container>
-                    <Header style={{ backgroundColor: '#05b8cc' }}>
+            // <View style={styles.container}>
+                <Container style={styles.container}>
+                    {/* <Header style={{ backgroundColor: '#05b8cc' }}>
                         <View>
                             <Icon style={{ color: '#fff', marginTop: 15, }} size={25} name='navicon' />
                         </View>
@@ -78,7 +78,7 @@ class Maps extends Component {
                         <View>
                             <Icon style={{ color: '#fff', marginTop: 15, marginRight: 10 }} onPress={this.Circles} size={25} name='group' />
                         </View>
-                    </Header>
+                    </Header> */}
                     {/* <View >
                         <ListItem avatar style={{ marginLeft: 0 }}>
                             <Left>
@@ -117,7 +117,7 @@ class Maps extends Component {
 
 
 
-                    {/* <MapView style={styles.mapView}
+                    <MapView 
                     style={styles.map}
                     initialRegion={{
                         latitude: this.state.latitude,
@@ -125,9 +125,9 @@ class Maps extends Component {
                         latitudeDelta: 0.0922,
                         longitudeDelta: 0.0421,
                     }}
-                /> */}
+                />
                 </Container>
-            </View>
+            // </View>
         )
     }
 }
@@ -136,11 +136,14 @@ export default connect(mapStateToProps, mapDispatchToProps)(Maps);
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'center',
-
-    },
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        // justifyContent: 'flex-end',
+        // alignItems: 'center',
+      },
     locations: {
         height: 100,
         flexDirection: 'column',
