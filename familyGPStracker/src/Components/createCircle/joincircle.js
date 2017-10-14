@@ -8,11 +8,13 @@ import {
 } from 'native-base';
 import axios from 'axios'
 import { CircleMiddleware } from '../../store/middlewares/circlesMiddleware';
+import * as firebase from 'firebase'
+
 
 
 function mapDispatchToProps(dispatch) {
     return {
-        createCircle: (users, uid) => dispatch(CircleMiddleware.createCircle(users, uid)),
+        joinCircle: (joinCode, member) => dispatch(CircleMiddleware.joinCircle(joinCode, member)),
     }
 }
 
@@ -22,10 +24,10 @@ function mapStateToProps(state) {
     }
 }
 
-class CreateCircle extends Component {
+class JoinCircle extends Component {
     constructor(props) {
         super(props);
-        this.state = { showCircles: false, circleName: '', uid: '', name: '', familyTapp: null }
+        this.state = { showCircles: false, circleCode: '', uid: '', name: '', familyTapp: null }
     }
     static navigationOptions = {
         title: "Create Circle",
@@ -35,7 +37,6 @@ class CreateCircle extends Component {
 
     componentWillMount() {
         console.disableYellowBox = true;
-        console.log(this.props)
         AsyncStorage.getItem('familytracker', (err, result) => {
             if (result !== null) {
                 console.log(result)
@@ -43,45 +44,34 @@ class CreateCircle extends Component {
                 let uid = data._id;
                 let name = data.fname;
                 this.setState({ uid, name })
-                console.log(uid)
-                this.setState({ familyTapp: data });
-                console.log(this.state.familyTapp);
-
             }
         });
+        // this.props.joinCircle();
     }
 
-    create = () => {
-        let circleName = this.state.circleName;
-        if (circleName == '') {
+    join = () => {
+
+        let member = {
+            name: this.state.name,
+            uid: this.state.uid,
+        }
+        let joinCode = this.state.circleCode;
+
+        if (joinCode == '') {
             Toast.show({
-                text: 'You must enter Circle Name',
+                text: 'Code Field is Empty!',
                 position: 'bottom',
                 buttonText: 'Okay'
-            })
+            });
         }
         else {
-            let uid = this.state.uid;
-            let groupCode = uid.slice(0, 6);
-            uid = {
-                // code: groupCode,
-                uid: this.state.uid,
-                name: this.state.name,
-            }
-            let userCircle = {
-                uname: this.state.familyTapp.fname,
-                name: this.state.circleName,
-                members: []
-            }
-            console.log(userCircle)
-
-            this.props.createCircle(userCircle, uid);
-            this.setState({
-                circleName: '',
-            })
+            this.props.joinCircle(joinCode, member)
         }
+        // console.log('dadadadadadadadadadad')
+        // firebase.database().ref('/Circles/').on('value', (data) => {
+        //     console.log(data)
+        // })
     }
-
     allCircles = () => {
         this.props.navigation.navigate('circles');
     }
@@ -96,22 +86,24 @@ class CreateCircle extends Component {
                         </Button>
                     </Left>
                     <Body>
-                        <Title >Create a Circle</Title>
+                        <Title >Join a Circle</Title>
                     </Body>
                 </Header>
 
-                <Content>
+                <Content  >
                     <Form>
-                        <Text style={{ alignSelf: 'center', marginTop: '10%', fontSize: 16 }}>Enter You Circle Name : </Text>
+                        <Text style={{ alignSelf: 'center', marginTop: '20%', fontSize: 16 }}>Please, enter invite code</Text>
                         <Item floatingLabel style={{ width: '60%', marginLeft: '20%', marginTop: '5%' }}>
-                            <Label>Enter Circle Name</Label>
-                            <Input onChangeText={(circleName) => this.setState({ circleName })} />
+                            <Label>Enter Circle Code</Label>
+                            <Input onChangeText={(circleCode) => this.setState({ circleCode })} />
                         </Item>
 
-
-                        <Button block rounded onPress={this.create}
-                            style={{ backgroundColor: '#05b8cc', marginTop: 30, padding: 10, width: 120, alignSelf: 'center' }}>
-                            <Text style={{ color: '#fff', }} >Create</Text>
+                        <Text style={{ alignSelf: 'center', marginTop: '8%', fontSize: 16 }}>
+                            Get the Code from your Circle's admin
+                       </Text>
+                        <Button block rounded onPress={this.join}
+                            style={{ backgroundColor: '#05b8cc', marginTop: 20, padding: 10, width: 120, alignSelf: 'center' }}>
+                            <Text style={{ color: '#fff', }} >SUBMIT</Text>
                         </Button>
                     </Form>
                 </Content>
@@ -123,14 +115,13 @@ class CreateCircle extends Component {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(CreateCircle);
+export default connect(mapStateToProps, mapDispatchToProps)(JoinCircle);
 
 
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        flexDirection: 'column',
+        flex: 2,
         justifyContent: 'center',
 
     },

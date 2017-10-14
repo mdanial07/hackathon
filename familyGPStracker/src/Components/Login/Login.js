@@ -42,7 +42,7 @@ class Login extends Component {
                 firebase.auth().signInWithEmailAndPassword(email, pass)
                     .then((user) => {
                         console.log("dadad")
-                        this.props.navigation.navigate('profile')
+                        this.props.navigation.navigate('maps')
                     })
             }
         });

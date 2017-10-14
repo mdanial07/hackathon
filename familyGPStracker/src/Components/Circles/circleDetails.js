@@ -4,14 +4,19 @@ import { View, AsyncStorage, Image, StyleSheet, TextInput } from "react-native"
 import { connect } from 'react-redux';
 import { LoginMiddleware } from '../../store/middlewares/loginMiddleware';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { CircleMiddleware } from '../../store/middlewares/circlesMiddleware'
+import * as firebase from "firebase";
+
 
 function mapDispatchToProps(dispatch) {
     return {
+        getAllCircles: () => dispatch(CircleMiddleware.getAllCircles()),
     }
 }
 
 function mapStateToProps(state) {
     return {
+        circles: state.Circles.circles
     }
 }
 
@@ -20,11 +25,38 @@ class CirclesDetails extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { email: '', pass: '', user: [], showCircles: false }
+        this.state = { key: '', ownerName: '', user: [], keyValue: '', showCircles: false }
     }
     static navigationOptions = {
         title: 'Login Page',
         header: null,
+    }
+
+    componentWillMount() {
+        this.props.getAllCircles();
+
+
+
+        let k = this.props.navigation.state.params.keys
+        let ownername = this.props.navigation.state.params.ownername
+        let keyV = this.props.navigation.state.params.keyValue
+        let mainkey = this.props.navigation.state.params.mainKey
+        console.log(mainkey)
+
+        firebase.database().ref(`/Circles/${mainkey}/members`).on('value', (data) => {
+            let userData = data.val();
+            console.log(userData)
+            let array = [];
+            for (var data in userData) {
+                array.push(userData[data])
+            }
+            console.log(array)
+            this.setState({ user: array })
+        })
+
+        console.log(keyV, k, ownername)
+
+        this.setState({ ownerName: ownername, key: k, keyValue: keyV })
     }
 
     maps = () => {
@@ -33,49 +65,56 @@ class CirclesDetails extends Component {
 
     circles = () => {
         this.props.navigation.navigate('circles')
-
     }
 
     render() {
+        console.log(this.props.circle)
+        console.log(this.state.key)
         return (
             <Container>
-                <View>
-                </View>
+                <Header style={{ backgroundColor: '#05b8cc' }}>
+                    <View>
+                        <Icon style={{ color: '#333', marginLeft: 15, marginTop: 15, }} size={20} name='arrow-left' onPress={this.circles} />
+                        {/* <Icon style={{ color: '#fff', marginTop: 15, }} size={25} name='navicon' /> */}
+                    </View>
+                    <Body style={{ marginRight: 10, alignItems: 'center' }}>
+                        {/* <Title style={{alignSelf: 'center'}}>Family GPS Tracker </Title> */}
+                    </Body>
+                    <Right>
+                        {/* <Icon style={{ color: '#fff', marginTop: 15, marginRight: 10 }} onPress={this.Circles} size={20} name='group' /> */}
+                        <Button>
+                            <Text>View Map </Text>
+                        </Button>
+                    </Right>
+                </Header>
 
                 <Content>
-                    <Icon style={{ color: '#333', marginLeft: 15, marginTop: 15, }} size={20} name='arrow-left' onPress={this.circles} />
-                    {/* <Thumbnail style={{ alignSelf: 'center', borderWidth: 2, borderColor: '#05b8cc', marginTop: '5%', marginBottom: '2%' }} large size={80} source={{ uri: 'https://scontent.fkhi9-1.fna.fbcdn.net/v/t1.0-9/21432894_1192746394162794_1096900880755878585_n.jpg?oh=ef1d58816ee341804cbcd9f366528413&oe=5A5314D1' }} /> */}
 
-                    <Icon style={{ alignSelf: 'center', marginBottom: '2%' }} size={100} name='user-o' />
-
-                    <Text style={{ alignSelf: 'center', marginBottom: '5%' }}>University Circle</Text>
-
-                    <View style={{ borderWidth: 1, borderColor: '#d3d3d3', marginTop: '5%', width: '100%', alignSelf: 'center', flexDirection: 'row', flexWrap: 'wrap'  }}>
-                        <Thumbnail style={{ marginTop: '4%', marginLeft: '3%' }} large  source={{ uri: 'https://scontent.fkhi9-1.fna.fbcdn.net/v/t1.0-9/21432894_1192746394162794_1096900880755878585_n.jpg?oh=ef1d58816ee341804cbcd9f366528413&oe=5A5314D1' }} />
-                        <Thumbnail style={{ marginTop: '4%', marginLeft: '3%'}} large source={{ uri: 'https://scontent.fkhi9-1.fna.fbcdn.net/v/t1.0-9/21432894_1192746394162794_1096900880755878585_n.jpg?oh=ef1d58816ee341804cbcd9f366528413&oe=5A5314D1' }} />
-                        <Thumbnail style={{ marginTop: '4%', marginLeft: '3%'}} large source={{ uri: 'https://scontent.fkhi9-1.fna.fbcdn.net/v/t1.0-9/21432894_1192746394162794_1096900880755878585_n.jpg?oh=ef1d58816ee341804cbcd9f366528413&oe=5A5314D1' }} />
-                        <Thumbnail style={{ marginTop: '4%', marginLeft: '3%'}} large source={{ uri: 'https://scontent.fkhi9-1.fna.fbcdn.net/v/t1.0-9/21432894_1192746394162794_1096900880755878585_n.jpg?oh=ef1d58816ee341804cbcd9f366528413&oe=5A5314D1' }} />
-                        <Thumbnail style={{ marginTop: '4%', marginLeft: '3%'}} large source={{ uri: 'https://scontent.fkhi9-1.fna.fbcdn.net/v/t1.0-9/21432894_1192746394162794_1096900880755878585_n.jpg?oh=ef1d58816ee341804cbcd9f366528413&oe=5A5314D1' }} />
-                        <Thumbnail style={{ marginTop: '4%', marginLeft: '3%'}} large source={{ uri: 'https://scontent.fkhi9-1.fna.fbcdn.net/v/t1.0-9/21432894_1192746394162794_1096900880755878585_n.jpg?oh=ef1d58816ee341804cbcd9f366528413&oe=5A5314D1' }} />
-                        <Thumbnail style={{ marginTop: '4%', marginLeft: '3%'}} large source={{ uri: 'https://scontent.fkhi9-1.fna.fbcdn.net/v/t1.0-9/21432894_1192746394162794_1096900880755878585_n.jpg?oh=ef1d58816ee341804cbcd9f366528413&oe=5A5314D1' }} />
-                        <Thumbnail style={{ marginTop: '4%', marginLeft: '3%'}} large source={{ uri: 'https://scontent.fkhi9-1.fna.fbcdn.net/v/t1.0-9/21432894_1192746394162794_1096900880755878585_n.jpg?oh=ef1d58816ee341804cbcd9f366528413&oe=5A5314D1' }} />
+                    <View >
+                        <Icon style={{ alignSelf: 'center', marginBottom: '2%', marginTop: '5%' }} size={100} name='user-o' />
                     </View>
-                    {/* <Item floatingLabel  >
-                            <Label>Name</Label>
-                            <Input />
-                        </Item>
-                        <Item floatingLabel style={{ marginTop: '4%' }}>
-                            <Label>Surname</Label>
-                            <Input />
-                        </Item>
-                        <Item floatingLabel style={{ marginTop: '4%' }}>
-                            <Label>Email Address</Label>
-                            <Input />
-                        </Item>
-                        <Item floatingLabel style={{ marginTop: '4%' }}>
-                            <Label>Password</Label>
-                            <Input />
-                        </Item> */}
+
+                    <Text style={{ alignSelf: 'center', marginBottom: '1%', fontSize: 14 }}>{this.state.ownerName}</Text>
+                    <Text style={{ alignSelf: 'center', marginBottom: '5%', fontSize: 12 }}>Circle Code: {this.state.keyValue}</Text>
+                    <View style={{ borderTopWidth: 1, borderTopColor: '#d3d3d3', marginTop: '3%', width: '100%', alignSelf: 'center', flexDirection: 'row', flexWrap: 'wrap' }}>
+
+                        {
+                            /* this.state.key != undefined ? */
+
+                            this.state.user.map((value, k) => {
+                                return (
+                                    <View key={k} style={{ marginTop: '4%', marginLeft: '2%', flexDirection: 'row', flexWrap: 'wrap' }} >
+                                        <View style={{ flexDirection: 'column' }}>
+                                            <Thumbnail style={{ marginTop: '4%', marginLeft: '2%' }} large source={{ uri: 'https://scontent.fkhi9-1.fna.fbcdn.net/v/t1.0-9/21432894_1192746394162794_1096900880755878585_n.jpg?oh=ef1d58816ee341804cbcd9f366528413&oe=5A5314D1' }} />
+                                            <Text style={{ fontSize: 10, width: 70, textAlign: 'center', alignSelf: 'center' }}>{value.name} </Text>
+                                        </View>
+                                    </View>
+                                )
+                            })
+                            /* : null */
+                        }
+
+                    </View>
                 </Content>
             </Container>
         )

@@ -73,16 +73,25 @@ class HomePage extends Component {
 
     render() {
         return (
-            <View style={styles.container}>
-                <MapView style={styles.mapView}
+            <View
+                style={styles.container}>
+                <MapView
+                    provider="google"
                     style={styles.map}
-                    initialRegion={{
-                        latitude: this.state.latitude,
-                        longitude: this.state.longitude,
-                        latitudeDelta: 0.0922,
-                        longitudeDelta: 0.0421,
-                    }}
-                />
+                    showsUserLocation={true}
+                    followsUserLocation={true}
+                    showsCompass={false}
+                    showsPointOfInternet={false}
+                    region={this.state.region}
+                    onRegionChange={this.onRegionChange}
+                    mapType="standard"
+                    onPress={this.onMapPress.bind(this)}
+                    zoomEnabled={true}
+                    pitchEnabled={true}
+                    showsBuildings={true}
+                    showsTraffic={true}
+                    showsIndoors={true}>
+                </MapView>
             </View>
         )
     }
@@ -95,28 +104,30 @@ export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
 
 const styles = StyleSheet.create({
     container: {
+        // position: 'absolute',
+        flexDirection: "column",
+        // top: 0,
+        // left: 0,
+        // right: 0,
+        // bottom: 0,
+        ...StyleSheet.absoluteFillObject,
+
         flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'center',
-
-    },
-    locations: {
-        height: 100,
-        flexDirection: 'column',
-        justifyContent: 'center',
-
-    },
-    mapView: {
-        flex: 2,
-        height: 100,
-        flexDirection: 'column',
-        justifyContent: 'center',
+        justifyContent: 'flex-end',
+        // alignItems: 'center',
     },
     map: {
-        left: 0,
-        right: 0,
-        top: 0,
-        bottom: 0,
-        position: 'absolute'
+        flex: 1,
+        height: 520,
+        justifyContent: 'flex-end',
+        ...StyleSheet.absoluteFillObject,
+        alignItems: 'center',
+        // position: 'absolute',
+        // height: '50%',
+        // top: 0,
+        // left: 0,
+        // right: 0,
+        // bottom: 300,
+
     },
 });

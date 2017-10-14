@@ -21,7 +21,7 @@ export class LoginMiddleware {
                         buttonText: 'Okay'
                     });
 
-                    props.navigation.navigate('profile')
+                    props.navigation.navigate('maps')
                 })
                 .catch(function (error) {
                     // Handle Errors here.

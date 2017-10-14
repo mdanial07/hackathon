@@ -47,7 +47,7 @@ class Profile extends Component {
     }
 
     profile = () => {
-        this.props.navigation.navigate('profiledetails')
+        this.props.navigation.navigate('circles')
     }
 
 

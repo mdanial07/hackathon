@@ -8,6 +8,7 @@ import Circles from "./Components/Circles/circles"
 import CreateCircle from "./Components/createCircle/createcircle"
 import Maps from "./Components/Maps/maps"
 import CirclesDetails from './Components/Circles/circleDetails'
+import JoinCircle from './Components/createCircle/joincircle'
 // import AllCircles from "./Components/AllCircles/allCircles"
 // import PatientRegForm from "./Components/RegForm/regForm"
 // import PatientList from "./Components/PatientsList/patientsList"
@@ -18,13 +19,14 @@ import ProfileDetails from './Components/Profile/details'
 // import TabsNav from './Components/TabsNav/tabsNav'
 
 const Naviagte = StackNavigator({
-    circleDetails: { screen: CirclesDetails },
-    maps: { screen: Maps },
     circles: { screen: Circles },
-    homePage: { screen: HomePage },
-    profile: { screen: Profile },
     profiledetails: { screen: ProfileDetails },
+    profile: { screen: Profile },
     login: { screen: Login },
+    joincircle: { screen: JoinCircle },
+    circleDetails: { screen: CirclesDetails },
+    homePage: { screen: HomePage },
+    maps: { screen: Maps },
     createcircle: { screen: CreateCircle },
     signup: { screen: Signup },
     // tabnavigation: { screen: TabNavigation },

@@ -11,6 +11,7 @@
         android:minSdkVersion="16"
         android:targetSdkVersion="22" />
 
+
     <application
       android:name=".MainApplication"
       android:allowBackup="true"
@@ -19,8 +20,9 @@
       android:theme="@style/AppTheme">
 
     <meta-data
-        android:name="com.google.android.geo.API_KEY"
-        android:value="AIzaSyDOb-DRoV10A_ZeLLFxO7M6V9FYgcTJbyI"/> 
+             android:name="com.google.android.geo.API_KEY"
+             android:value="AIzaSyDvaa0UPh2q-0LbbSNv6DrxTlOkeS2heSo"
+             />
 
 
       <activity
