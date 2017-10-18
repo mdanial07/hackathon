@@ -1,0 +1,1350 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@3.10.10
+3 info using node@v6.9.5
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData axios
+20 silly mapToRegistry name axios
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry data Result {
+23 silly mapToRegistry   raw: 'axios',
+23 silly mapToRegistry   scope: null,
+23 silly mapToRegistry   escapedName: 'axios',
+23 silly mapToRegistry   name: 'axios',
+23 silly mapToRegistry   rawSpec: '',
+23 silly mapToRegistry   spec: 'latest',
+23 silly mapToRegistry   type: 'tag' }
+24 silly mapToRegistry uri https://registry.npmjs.org/axios
+25 silly fetchNamedPackageData firebase
+26 silly mapToRegistry name firebase
+27 silly mapToRegistry using default registry
+28 silly mapToRegistry registry https://registry.npmjs.org/
+29 silly mapToRegistry data Result {
+29 silly mapToRegistry   raw: 'firebase',
+29 silly mapToRegistry   scope: null,
+29 silly mapToRegistry   escapedName: 'firebase',
+29 silly mapToRegistry   name: 'firebase',
+29 silly mapToRegistry   rawSpec: '',
+29 silly mapToRegistry   spec: 'latest',
+29 silly mapToRegistry   type: 'tag' }
+30 silly mapToRegistry uri https://registry.npmjs.org/firebase
+31 silly fetchNamedPackageData native-base
+32 silly mapToRegistry name native-base
+33 silly mapToRegistry using default registry
+34 silly mapToRegistry registry https://registry.npmjs.org/
+35 silly mapToRegistry data Result {
+35 silly mapToRegistry   raw: 'native-base',
+35 silly mapToRegistry   scope: null,
+35 silly mapToRegistry   escapedName: 'native-base',
+35 silly mapToRegistry   name: 'native-base',
+35 silly mapToRegistry   rawSpec: '',
+35 silly mapToRegistry   spec: 'latest',
+35 silly mapToRegistry   type: 'tag' }
+36 silly mapToRegistry uri https://registry.npmjs.org/native-base
+37 silly fetchNamedPackageData react
+38 silly mapToRegistry name react
+39 silly mapToRegistry using default registry
+40 silly mapToRegistry registry https://registry.npmjs.org/
+41 silly mapToRegistry data Result {
+41 silly mapToRegistry   raw: 'react',
+41 silly mapToRegistry   scope: null,
+41 silly mapToRegistry   escapedName: 'react',
+41 silly mapToRegistry   name: 'react',
+41 silly mapToRegistry   rawSpec: '',
+41 silly mapToRegistry   spec: 'latest',
+41 silly mapToRegistry   type: 'tag' }
+42 silly mapToRegistry uri https://registry.npmjs.org/react
+43 silly fetchNamedPackageData react-native
+44 silly mapToRegistry name react-native
+45 silly mapToRegistry using default registry
+46 silly mapToRegistry registry https://registry.npmjs.org/
+47 silly mapToRegistry data Result {
+47 silly mapToRegistry   raw: 'react-native',
+47 silly mapToRegistry   scope: null,
+47 silly mapToRegistry   escapedName: 'react-native',
+47 silly mapToRegistry   name: 'react-native',
+47 silly mapToRegistry   rawSpec: '',
+47 silly mapToRegistry   spec: 'latest',
+47 silly mapToRegistry   type: 'tag' }
+48 silly mapToRegistry uri https://registry.npmjs.org/react-native
+49 silly fetchNamedPackageData react-native-datepicker
+50 silly mapToRegistry name react-native-datepicker
+51 silly mapToRegistry using default registry
+52 silly mapToRegistry registry https://registry.npmjs.org/
+53 silly mapToRegistry data Result {
+53 silly mapToRegistry   raw: 'react-native-datepicker',
+53 silly mapToRegistry   scope: null,
+53 silly mapToRegistry   escapedName: 'react-native-datepicker',
+53 silly mapToRegistry   name: 'react-native-datepicker',
+53 silly mapToRegistry   rawSpec: '',
+53 silly mapToRegistry   spec: 'latest',
+53 silly mapToRegistry   type: 'tag' }
+54 silly mapToRegistry uri https://registry.npmjs.org/react-native-datepicker
+55 silly fetchNamedPackageData react-native-maps
+56 silly mapToRegistry name react-native-maps
+57 silly mapToRegistry using default registry
+58 silly mapToRegistry registry https://registry.npmjs.org/
+59 silly mapToRegistry data Result {
+59 silly mapToRegistry   raw: 'react-native-maps',
+59 silly mapToRegistry   scope: null,
+59 silly mapToRegistry   escapedName: 'react-native-maps',
+59 silly mapToRegistry   name: 'react-native-maps',
+59 silly mapToRegistry   rawSpec: '',
+59 silly mapToRegistry   spec: 'latest',
+59 silly mapToRegistry   type: 'tag' }
+60 silly mapToRegistry uri https://registry.npmjs.org/react-native-maps
+61 silly fetchNamedPackageData react-navigation
+62 silly mapToRegistry name react-navigation
+63 silly mapToRegistry using default registry
+64 silly mapToRegistry registry https://registry.npmjs.org/
+65 silly mapToRegistry data Result {
+65 silly mapToRegistry   raw: 'react-navigation',
+65 silly mapToRegistry   scope: null,
+65 silly mapToRegistry   escapedName: 'react-navigation',
+65 silly mapToRegistry   name: 'react-navigation',
+65 silly mapToRegistry   rawSpec: '',
+65 silly mapToRegistry   spec: 'latest',
+65 silly mapToRegistry   type: 'tag' }
+66 silly mapToRegistry uri https://registry.npmjs.org/react-navigation
+67 silly fetchNamedPackageData react-redux
+68 silly mapToRegistry name react-redux
+69 silly mapToRegistry using default registry
+70 silly mapToRegistry registry https://registry.npmjs.org/
+71 silly mapToRegistry data Result {
+71 silly mapToRegistry   raw: 'react-redux',
+71 silly mapToRegistry   scope: null,
+71 silly mapToRegistry   escapedName: 'react-redux',
+71 silly mapToRegistry   name: 'react-redux',
+71 silly mapToRegistry   rawSpec: '',
+71 silly mapToRegistry   spec: 'latest',
+71 silly mapToRegistry   type: 'tag' }
+72 silly mapToRegistry uri https://registry.npmjs.org/react-redux
+73 silly fetchNamedPackageData redux
+74 silly mapToRegistry name redux
+75 silly mapToRegistry using default registry
+76 silly mapToRegistry registry https://registry.npmjs.org/
+77 silly mapToRegistry data Result {
+77 silly mapToRegistry   raw: 'redux',
+77 silly mapToRegistry   scope: null,
+77 silly mapToRegistry   escapedName: 'redux',
+77 silly mapToRegistry   name: 'redux',
+77 silly mapToRegistry   rawSpec: '',
+77 silly mapToRegistry   spec: 'latest',
+77 silly mapToRegistry   type: 'tag' }
+78 silly mapToRegistry uri https://registry.npmjs.org/redux
+79 silly fetchNamedPackageData redux-thunk
+80 silly mapToRegistry name redux-thunk
+81 silly mapToRegistry using default registry
+82 silly mapToRegistry registry https://registry.npmjs.org/
+83 silly mapToRegistry data Result {
+83 silly mapToRegistry   raw: 'redux-thunk',
+83 silly mapToRegistry   scope: null,
+83 silly mapToRegistry   escapedName: 'redux-thunk',
+83 silly mapToRegistry   name: 'redux-thunk',
+83 silly mapToRegistry   rawSpec: '',
+83 silly mapToRegistry   spec: 'latest',
+83 silly mapToRegistry   type: 'tag' }
+84 silly mapToRegistry uri https://registry.npmjs.org/redux-thunk
+85 verbose request uri https://registry.npmjs.org/react
+86 verbose request no auth needed
+87 info attempt registry request try #1 at 3:10:05 PM
+88 verbose request id dc0b52c3d2f93117
+89 verbose etag W/"59e2ae0a-30424"
+90 verbose lastModified Sun, 15 Oct 2017 00:38:34 GMT
+91 http request GET https://registry.npmjs.org/react
+92 verbose request uri https://registry.npmjs.org/firebase
+93 verbose request no auth needed
+94 info attempt registry request try #1 at 3:10:05 PM
+95 verbose etag W/"59d95381-251ba"
+96 verbose lastModified Sat, 07 Oct 2017 22:21:53 GMT
+97 http request GET https://registry.npmjs.org/firebase
+98 verbose request uri https://registry.npmjs.org/axios
+99 verbose request no auth needed
+100 info attempt registry request try #1 at 3:10:05 PM
+101 verbose etag W/"59d9ee9a-17384"
+102 verbose lastModified Sun, 08 Oct 2017 09:23:38 GMT
+103 http request GET https://registry.npmjs.org/axios
+104 verbose request uri https://registry.npmjs.org/react-native
+105 verbose request no auth needed
+106 info attempt registry request try #1 at 3:10:05 PM
+107 verbose etag W/"59de5dfe-11cb06"
+108 verbose lastModified Wed, 11 Oct 2017 18:07:58 GMT
+109 http request GET https://registry.npmjs.org/react-native
+110 verbose request uri https://registry.npmjs.org/native-base
+111 verbose request no auth needed
+112 info attempt registry request try #1 at 3:10:05 PM
+113 verbose etag W/"59ba634a-2452e"
+114 verbose lastModified Thu, 14 Sep 2017 11:08:58 GMT
+115 http request GET https://registry.npmjs.org/native-base
+116 verbose request uri https://registry.npmjs.org/react-native-maps
+117 verbose request no auth needed
+118 info attempt registry request try #1 at 3:10:05 PM
+119 verbose etag W/"59b9db2f-18c05"
+120 verbose lastModified Thu, 14 Sep 2017 01:28:15 GMT
+121 http request GET https://registry.npmjs.org/react-native-maps
+122 verbose request uri https://registry.npmjs.org/react-redux
+123 verbose request no auth needed
+124 info attempt registry request try #1 at 3:10:06 PM
+125 verbose etag W/"59da7886-2ec39"
+126 verbose lastModified Sun, 08 Oct 2017 19:12:06 GMT
+127 http request GET https://registry.npmjs.org/react-redux
+128 verbose request uri https://registry.npmjs.org/react-native-datepicker
+129 verbose request no auth needed
+130 info attempt registry request try #1 at 3:10:06 PM
+131 verbose etag W/"59c0ef4b-c87e"
+132 verbose lastModified Tue, 19 Sep 2017 10:19:55 GMT
+133 http request GET https://registry.npmjs.org/react-native-datepicker
+134 verbose request uri https://registry.npmjs.org/redux-thunk
+135 verbose request no auth needed
+136 info attempt registry request try #1 at 3:10:06 PM
+137 verbose etag W/"59cc575b-8570"
+138 verbose lastModified Thu, 28 Sep 2017 01:58:51 GMT
+139 http request GET https://registry.npmjs.org/redux-thunk
+140 verbose request uri https://registry.npmjs.org/redux
+141 verbose request no auth needed
+142 info attempt registry request try #1 at 3:10:06 PM
+143 verbose etag W/"59da7879-29013"
+144 verbose lastModified Sun, 08 Oct 2017 19:11:53 GMT
+145 http request GET https://registry.npmjs.org/redux
+146 verbose request uri https://registry.npmjs.org/react-navigation
+147 verbose request no auth needed
+148 info attempt registry request try #1 at 3:10:06 PM
+149 verbose etag W/"59cbbd60-de10"
+150 verbose lastModified Wed, 27 Sep 2017 15:01:52 GMT
+151 http request GET https://registry.npmjs.org/react-navigation
+152 http 304 https://registry.npmjs.org/react
+153 verbose headers { date: 'Sun, 15 Oct 2017 10:10:08 GMT',
+153 verbose headers   via: '1.1 varnish',
+153 verbose headers   'cache-control': 'max-age=300',
+153 verbose headers   etag: 'W/"59e2ae0a-30424"',
+153 verbose headers   age: '52',
+153 verbose headers   connection: 'keep-alive',
+153 verbose headers   'x-served-by': 'cache-hkg17934-HKG',
+153 verbose headers   'x-cache': 'HIT',
+153 verbose headers   'x-cache-hits': '1',
+153 verbose headers   'x-timer': 'S1508062208.056629,VS0,VE0',
+153 verbose headers   vary: 'Accept-Encoding, Accept' }
+154 silly get cb [ 304,
+154 silly get   { date: 'Sun, 15 Oct 2017 10:10:08 GMT',
+154 silly get     via: '1.1 varnish',
+154 silly get     'cache-control': 'max-age=300',
+154 silly get     etag: 'W/"59e2ae0a-30424"',
+154 silly get     age: '52',
+154 silly get     connection: 'keep-alive',
+154 silly get     'x-served-by': 'cache-hkg17934-HKG',
+154 silly get     'x-cache': 'HIT',
+154 silly get     'x-cache-hits': '1',
+154 silly get     'x-timer': 'S1508062208.056629,VS0,VE0',
+154 silly get     vary: 'Accept-Encoding, Accept' } ]
+155 verbose etag https://registry.npmjs.org/react from cache
+156 verbose get saving react to C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\registry.npmjs.org\react\.cache.json
+157 verbose correctMkdir C:\Users\Muhammad Danial\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+158 http 304 https://registry.npmjs.org/react-native
+159 verbose headers { date: 'Sun, 15 Oct 2017 10:10:08 GMT',
+159 verbose headers   via: '1.1 varnish',
+159 verbose headers   'cache-control': 'max-age=300',
+159 verbose headers   etag: 'W/"59de5dfe-11cb06"',
+159 verbose headers   age: '285',
+159 verbose headers   connection: 'keep-alive',
+159 verbose headers   'x-served-by': 'cache-hkg17923-HKG',
+159 verbose headers   'x-cache': 'HIT',
+159 verbose headers   'x-cache-hits': '1',
+159 verbose headers   'x-timer': 'S1508062208.072857,VS0,VE0',
+159 verbose headers   vary: 'Accept-Encoding, Accept' }
+160 silly get cb [ 304,
+160 silly get   { date: 'Sun, 15 Oct 2017 10:10:08 GMT',
+160 silly get     via: '1.1 varnish',
+160 silly get     'cache-control': 'max-age=300',
+160 silly get     etag: 'W/"59de5dfe-11cb06"',
+160 silly get     age: '285',
+160 silly get     connection: 'keep-alive',
+160 silly get     'x-served-by': 'cache-hkg17923-HKG',
+160 silly get     'x-cache': 'HIT',
+160 silly get     'x-cache-hits': '1',
+160 silly get     'x-timer': 'S1508062208.072857,VS0,VE0',
+160 silly get     vary: 'Accept-Encoding, Accept' } ]
+161 verbose etag https://registry.npmjs.org/react-native from cache
+162 verbose get saving react-native to C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\registry.npmjs.org\react-native\.cache.json
+163 verbose correctMkdir C:\Users\Muhammad Danial\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+164 http 304 https://registry.npmjs.org/react-native-datepicker
+165 verbose headers { date: 'Sun, 15 Oct 2017 10:10:08 GMT',
+165 verbose headers   via: '1.1 varnish',
+165 verbose headers   'cache-control': 'max-age=300',
+165 verbose headers   etag: 'W/"59c0ef4b-c87e"',
+165 verbose headers   age: '44',
+165 verbose headers   connection: 'keep-alive',
+165 verbose headers   'x-served-by': 'cache-hkg17921-HKG',
+165 verbose headers   'x-cache': 'HIT',
+165 verbose headers   'x-cache-hits': '1',
+165 verbose headers   'x-timer': 'S1508062208.083783,VS0,VE0',
+165 verbose headers   vary: 'Accept-Encoding, Accept' }
+166 silly get cb [ 304,
+166 silly get   { date: 'Sun, 15 Oct 2017 10:10:08 GMT',
+166 silly get     via: '1.1 varnish',
+166 silly get     'cache-control': 'max-age=300',
+166 silly get     etag: 'W/"59c0ef4b-c87e"',
+166 silly get     age: '44',
+166 silly get     connection: 'keep-alive',
+166 silly get     'x-served-by': 'cache-hkg17921-HKG',
+166 silly get     'x-cache': 'HIT',
+166 silly get     'x-cache-hits': '1',
+166 silly get     'x-timer': 'S1508062208.083783,VS0,VE0',
+166 silly get     vary: 'Accept-Encoding, Accept' } ]
+167 verbose etag https://registry.npmjs.org/react-native-datepicker from cache
+168 verbose get saving react-native-datepicker to C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\registry.npmjs.org\react-native-datepicker\.cache.json
+169 verbose correctMkdir C:\Users\Muhammad Danial\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+170 silly resolveWithNewModule react@16.0.0-beta.5 checking installable status
+171 silly cache add args [ 'react@16.0.0-beta.5', null ]
+172 verbose cache add spec react@16.0.0-beta.5
+173 silly cache add parsed spec Result {
+173 silly cache add   raw: 'react@16.0.0-beta.5',
+173 silly cache add   scope: null,
+173 silly cache add   escapedName: 'react',
+173 silly cache add   name: 'react',
+173 silly cache add   rawSpec: '16.0.0-beta.5',
+173 silly cache add   spec: '16.0.0-beta.5',
+173 silly cache add   type: 'version' }
+174 silly addNamed react@16.0.0-beta.5
+175 verbose addNamed "16.0.0-beta.5" is a plain semver version for react
+176 silly mapToRegistry name react
+177 silly mapToRegistry using default registry
+178 silly mapToRegistry registry https://registry.npmjs.org/
+179 silly mapToRegistry data Result {
+179 silly mapToRegistry   raw: 'react',
+179 silly mapToRegistry   scope: null,
+179 silly mapToRegistry   escapedName: 'react',
+179 silly mapToRegistry   name: 'react',
+179 silly mapToRegistry   rawSpec: '',
+179 silly mapToRegistry   spec: 'latest',
+179 silly mapToRegistry   type: 'tag' }
+180 silly mapToRegistry uri https://registry.npmjs.org/react
+181 verbose addNameVersion registry:https://registry.npmjs.org/react not in flight; fetching
+182 verbose get https://registry.npmjs.org/react not expired, no request
+183 silly resolveWithNewModule react-native@0.49.1 checking installable status
+184 silly cache add args [ 'react-native@0.49.1', null ]
+185 verbose cache add spec react-native@0.49.1
+186 silly cache add parsed spec Result {
+186 silly cache add   raw: 'react-native@0.49.1',
+186 silly cache add   scope: null,
+186 silly cache add   escapedName: 'react-native',
+186 silly cache add   name: 'react-native',
+186 silly cache add   rawSpec: '0.49.1',
+186 silly cache add   spec: '0.49.1',
+186 silly cache add   type: 'version' }
+187 silly addNamed react-native@0.49.1
+188 verbose addNamed "0.49.1" is a plain semver version for react-native
+189 silly mapToRegistry name react-native
+190 silly mapToRegistry using default registry
+191 silly mapToRegistry registry https://registry.npmjs.org/
+192 silly mapToRegistry data Result {
+192 silly mapToRegistry   raw: 'react-native',
+192 silly mapToRegistry   scope: null,
+192 silly mapToRegistry   escapedName: 'react-native',
+192 silly mapToRegistry   name: 'react-native',
+192 silly mapToRegistry   rawSpec: '',
+192 silly mapToRegistry   spec: 'latest',
+192 silly mapToRegistry   type: 'tag' }
+193 silly mapToRegistry uri https://registry.npmjs.org/react-native
+194 verbose addNameVersion registry:https://registry.npmjs.org/react-native not in flight; fetching
+195 silly resolveWithNewModule react-native-datepicker@1.6.0 checking installable status
+196 silly cache add args [ 'react-native-datepicker@^1.6.0', null ]
+197 verbose cache add spec react-native-datepicker@^1.6.0
+198 silly cache add parsed spec Result {
+198 silly cache add   raw: 'react-native-datepicker@^1.6.0',
+198 silly cache add   scope: null,
+198 silly cache add   escapedName: 'react-native-datepicker',
+198 silly cache add   name: 'react-native-datepicker',
+198 silly cache add   rawSpec: '^1.6.0',
+198 silly cache add   spec: '>=1.6.0 <2.0.0',
+198 silly cache add   type: 'range' }
+199 silly addNamed react-native-datepicker@>=1.6.0 <2.0.0
+200 verbose addNamed ">=1.6.0 <2.0.0" is a valid semver range for react-native-datepicker
+201 silly addNameRange { name: 'react-native-datepicker',
+201 silly addNameRange   range: '>=1.6.0 <2.0.0',
+201 silly addNameRange   hasData: false }
+202 silly mapToRegistry name react-native-datepicker
+203 silly mapToRegistry using default registry
+204 silly mapToRegistry registry https://registry.npmjs.org/
+205 silly mapToRegistry data Result {
+205 silly mapToRegistry   raw: 'react-native-datepicker',
+205 silly mapToRegistry   scope: null,
+205 silly mapToRegistry   escapedName: 'react-native-datepicker',
+205 silly mapToRegistry   name: 'react-native-datepicker',
+205 silly mapToRegistry   rawSpec: '',
+205 silly mapToRegistry   spec: 'latest',
+205 silly mapToRegistry   type: 'tag' }
+206 silly mapToRegistry uri https://registry.npmjs.org/react-native-datepicker
+207 verbose addNameRange registry:https://registry.npmjs.org/react-native-datepicker not in flight; fetching
+208 verbose get https://registry.npmjs.org/react-native-datepicker not expired, no request
+209 silly addNameRange number 2 { name: 'react-native-datepicker',
+209 silly addNameRange   range: '>=1.6.0 <2.0.0',
+209 silly addNameRange   hasData: true }
+210 silly addNameRange versions [ 'react-native-datepicker',
+210 silly addNameRange   [ '0.0.1',
+210 silly addNameRange     '0.0.2',
+210 silly addNameRange     '1.0.0',
+210 silly addNameRange     '1.0.1',
+210 silly addNameRange     '1.0.2',
+210 silly addNameRange     '1.0.3',
+210 silly addNameRange     '1.1.0',
+210 silly addNameRange     '1.2.0',
+210 silly addNameRange     '1.2.1',
+210 silly addNameRange     '1.2.2',
+210 silly addNameRange     '1.3.0',
+210 silly addNameRange     '1.3.1',
+210 silly addNameRange     '1.3.2',
+210 silly addNameRange     '1.4.0',
+210 silly addNameRange     '1.4.1',
+210 silly addNameRange     '1.4.2',
+210 silly addNameRange     '1.4.3',
+210 silly addNameRange     '1.4.4',
+210 silly addNameRange     '1.4.5',
+210 silly addNameRange     '1.4.6',
+210 silly addNameRange     '1.4.7',
+210 silly addNameRange     '1.5.0',
+210 silly addNameRange     '1.5.1',
+210 silly addNameRange     '1.6.0' ] ]
+211 silly addNamed react-native-datepicker@1.6.0
+212 verbose addNamed "1.6.0" is a plain semver version for react-native-datepicker
+213 verbose get https://registry.npmjs.org/react-native not expired, no request
+214 silly cache afterAdd react@16.0.0-beta.5
+215 verbose afterAdd C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\react\16.0.0-beta.5\package\package.json not in flight; writing
+216 verbose correctMkdir C:\Users\Muhammad Danial\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+217 verbose afterAdd C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\react\16.0.0-beta.5\package\package.json written
+218 silly cache afterAdd react-native-datepicker@1.6.0
+219 verbose afterAdd C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\react-native-datepicker\1.6.0\package\package.json not in flight; writing
+220 verbose correctMkdir C:\Users\Muhammad Danial\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+221 silly mapToRegistry name react-native
+222 silly mapToRegistry using default registry
+223 silly mapToRegistry registry https://registry.npmjs.org/
+224 silly mapToRegistry data Result {
+224 silly mapToRegistry   raw: 'react-native',
+224 silly mapToRegistry   scope: null,
+224 silly mapToRegistry   escapedName: 'react-native',
+224 silly mapToRegistry   name: 'react-native',
+224 silly mapToRegistry   rawSpec: '',
+224 silly mapToRegistry   spec: 'latest',
+224 silly mapToRegistry   type: 'tag' }
+225 silly mapToRegistry uri https://registry.npmjs.org/react-native
+226 verbose addRemoteTarball https://registry.npmjs.org/react-native/-/react-native-0.49.1.tgz not in flight; adding
+227 verbose addRemoteTarball [ 'https://registry.npmjs.org/react-native/-/react-native-0.49.1.tgz',
+227 verbose addRemoteTarball   'cf11575d823525d64bf31360d7f64b8fbcd11c1a' ]
+228 verbose afterAdd C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\react-native-datepicker\1.6.0\package\package.json written
+229 info retry fetch attempt 1 at 3:10:07 PM
+230 info attempt registry request try #1 at 3:10:07 PM
+231 http fetch GET https://registry.npmjs.org/react-native/-/react-native-0.49.1.tgz
+232 http 200 https://registry.npmjs.org/native-base
+233 verbose headers { server: 'nginx/1.10.3',
+233 verbose headers   'content-type': 'application/json',
+233 verbose headers   'last-modified': 'Fri, 13 Oct 2017 13:19:31 GMT',
+233 verbose headers   etag: 'W/"59e0bd63-25096"',
+233 verbose headers   'content-encoding': 'gzip',
+233 verbose headers   'cache-control': 'max-age=300',
+233 verbose headers   'content-length': '12187',
+233 verbose headers   'accept-ranges': 'bytes',
+233 verbose headers   date: 'Sun, 15 Oct 2017 10:10:08 GMT',
+233 verbose headers   via: '1.1 varnish',
+233 verbose headers   age: '0',
+233 verbose headers   connection: 'keep-alive',
+233 verbose headers   'x-served-by': 'cache-hkg17929-HKG',
+233 verbose headers   'x-cache': 'HIT',
+233 verbose headers   'x-cache-hits': '1',
+233 verbose headers   'x-timer': 'S1508062208.073125,VS0,VE184',
+233 verbose headers   vary: 'Accept-Encoding, Accept' }
+234 silly get cb [ 200,
+234 silly get   { server: 'nginx/1.10.3',
+234 silly get     'content-type': 'application/json',
+234 silly get     'last-modified': 'Fri, 13 Oct 2017 13:19:31 GMT',
+234 silly get     etag: 'W/"59e0bd63-25096"',
+234 silly get     'content-encoding': 'gzip',
+234 silly get     'cache-control': 'max-age=300',
+234 silly get     'content-length': '12187',
+234 silly get     'accept-ranges': 'bytes',
+234 silly get     date: 'Sun, 15 Oct 2017 10:10:08 GMT',
+234 silly get     via: '1.1 varnish',
+234 silly get     age: '0',
+234 silly get     connection: 'keep-alive',
+234 silly get     'x-served-by': 'cache-hkg17929-HKG',
+234 silly get     'x-cache': 'HIT',
+234 silly get     'x-cache-hits': '1',
+234 silly get     'x-timer': 'S1508062208.073125,VS0,VE184',
+234 silly get     vary: 'Accept-Encoding, Accept' } ]
+235 verbose get saving native-base to C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\registry.npmjs.org\native-base\.cache.json
+236 verbose correctMkdir C:\Users\Muhammad Danial\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+237 silly resolveWithNewModule native-base@2.3.3 checking installable status
+238 silly cache add args [ 'native-base@^2.3.1', null ]
+239 verbose cache add spec native-base@^2.3.1
+240 silly cache add parsed spec Result {
+240 silly cache add   raw: 'native-base@^2.3.1',
+240 silly cache add   scope: null,
+240 silly cache add   escapedName: 'native-base',
+240 silly cache add   name: 'native-base',
+240 silly cache add   rawSpec: '^2.3.1',
+240 silly cache add   spec: '>=2.3.1 <3.0.0',
+240 silly cache add   type: 'range' }
+241 silly addNamed native-base@>=2.3.1 <3.0.0
+242 verbose addNamed ">=2.3.1 <3.0.0" is a valid semver range for native-base
+243 silly addNameRange { name: 'native-base', range: '>=2.3.1 <3.0.0', hasData: false }
+244 silly mapToRegistry name native-base
+245 silly mapToRegistry using default registry
+246 silly mapToRegistry registry https://registry.npmjs.org/
+247 silly mapToRegistry data Result {
+247 silly mapToRegistry   raw: 'native-base',
+247 silly mapToRegistry   scope: null,
+247 silly mapToRegistry   escapedName: 'native-base',
+247 silly mapToRegistry   name: 'native-base',
+247 silly mapToRegistry   rawSpec: '',
+247 silly mapToRegistry   spec: 'latest',
+247 silly mapToRegistry   type: 'tag' }
+248 silly mapToRegistry uri https://registry.npmjs.org/native-base
+249 verbose addNameRange registry:https://registry.npmjs.org/native-base not in flight; fetching
+250 verbose get https://registry.npmjs.org/native-base not expired, no request
+251 silly addNameRange number 2 { name: 'native-base', range: '>=2.3.1 <3.0.0', hasData: true }
+252 silly addNameRange versions [ 'native-base',
+252 silly addNameRange   [ '0.1.0',
+252 silly addNameRange     '0.1.1',
+252 silly addNameRange     '0.2.0',
+252 silly addNameRange     '0.2.1',
+252 silly addNameRange     '0.2.2',
+252 silly addNameRange     '0.3.0',
+252 silly addNameRange     '0.3.1',
+252 silly addNameRange     '0.3.2',
+252 silly addNameRange     '0.4.0',
+252 silly addNameRange     '0.4.2',
+252 silly addNameRange     '0.4.3',
+252 silly addNameRange     '0.4.4',
+252 silly addNameRange     '0.4.5',
+252 silly addNameRange     '0.4.6',
+252 silly addNameRange     '0.4.7',
+252 silly addNameRange     '0.4.8',
+252 silly addNameRange     '0.4.9',
+252 silly addNameRange     '0.5.0',
+252 silly addNameRange     '0.5.1',
+252 silly addNameRange     '0.5.2',
+252 silly addNameRange     '0.5.3',
+252 silly addNameRange     '0.5.4',
+252 silly addNameRange     '0.5.5',
+252 silly addNameRange     '0.5.6',
+252 silly addNameRange     '0.5.7',
+252 silly addNameRange     '0.5.8',
+252 silly addNameRange     '0.5.9',
+252 silly addNameRange     '0.5.10',
+252 silly addNameRange     '0.5.11',
+252 silly addNameRange     '0.5.12',
+252 silly addNameRange     '0.5.13',
+252 silly addNameRange     '0.5.14',
+252 silly addNameRange     '0.5.15',
+252 silly addNameRange     '0.5.16',
+252 silly addNameRange     '0.5.17',
+252 silly addNameRange     '0.5.18',
+252 silly addNameRange     '0.5.19',
+252 silly addNameRange     '0.5.20',
+252 silly addNameRange     '0.5.21',
+252 silly addNameRange     '0.5.22',
+252 silly addNameRange     '2.0.0',
+252 silly addNameRange     '2.0.1',
+252 silly addNameRange     '2.0.2',
+252 silly addNameRange     '2.0.3',
+252 silly addNameRange     '2.0.4',
+252 silly addNameRange     '2.0.5',
+252 silly addNameRange     '2.0.6',
+252 silly addNameRange     '2.0.7',
+252 silly addNameRange     '2.0.8',
+252 silly addNameRange     '2.0.9',
+252 silly addNameRange     '2.0.10',
+252 silly addNameRange     '2.0.11',
+252 silly addNameRange     '2.0.12',
+252 silly addNameRange     '2.0.13',
+252 silly addNameRange     '2.1.0-rc.1',
+252 silly addNameRange     '2.1.0-rc.2',
+252 silly addNameRange     '2.1.0',
+252 silly addNameRange     '2.1.1',
+252 silly addNameRange     '2.1.2',
+252 silly addNameRange     '2.1.3',
+252 silly addNameRange     '2.1.4',
+252 silly addNameRange     '2.1.5',
+252 silly addNameRange     '2.2.0',
+252 silly addNameRange     '2.2.1',
+252 silly addNameRange     '2.3.0',
+252 silly addNameRange     '2.3.1',
+252 silly addNameRange     '2.3.2',
+252 silly addNameRange     '2.3.3' ] ]
+253 silly addNamed native-base@2.3.3
+254 verbose addNamed "2.3.3" is a plain semver version for native-base
+255 http 200 https://registry.npmjs.org/react-native-maps
+256 verbose headers { server: 'nginx/1.10.1',
+256 verbose headers   'content-type': 'application/json',
+256 verbose headers   'last-modified': 'Wed, 11 Oct 2017 21:02:58 GMT',
+256 verbose headers   etag: 'W/"59de8702-19778"',
+256 verbose headers   'content-encoding': 'gzip',
+256 verbose headers   'cache-control': 'max-age=300',
+256 verbose headers   'content-length': '13194',
+256 verbose headers   'accept-ranges': 'bytes',
+256 verbose headers   date: 'Sun, 15 Oct 2017 10:10:08 GMT',
+256 verbose headers   via: '1.1 varnish',
+256 verbose headers   age: '44',
+256 verbose headers   connection: 'keep-alive',
+256 verbose headers   'x-served-by': 'cache-hkg17930-HKG',
+256 verbose headers   'x-cache': 'HIT',
+256 verbose headers   'x-cache-hits': '18',
+256 verbose headers   'x-timer': 'S1508062208.083952,VS0,VE0',
+256 verbose headers   vary: 'Accept-Encoding, Accept' }
+257 silly get cb [ 200,
+257 silly get   { server: 'nginx/1.10.1',
+257 silly get     'content-type': 'application/json',
+257 silly get     'last-modified': 'Wed, 11 Oct 2017 21:02:58 GMT',
+257 silly get     etag: 'W/"59de8702-19778"',
+257 silly get     'content-encoding': 'gzip',
+257 silly get     'cache-control': 'max-age=300',
+257 silly get     'content-length': '13194',
+257 silly get     'accept-ranges': 'bytes',
+257 silly get     date: 'Sun, 15 Oct 2017 10:10:08 GMT',
+257 silly get     via: '1.1 varnish',
+257 silly get     age: '44',
+257 silly get     connection: 'keep-alive',
+257 silly get     'x-served-by': 'cache-hkg17930-HKG',
+257 silly get     'x-cache': 'HIT',
+257 silly get     'x-cache-hits': '18',
+257 silly get     'x-timer': 'S1508062208.083952,VS0,VE0',
+257 silly get     vary: 'Accept-Encoding, Accept' } ]
+258 verbose get saving react-native-maps to C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\registry.npmjs.org\react-native-maps\.cache.json
+259 verbose correctMkdir C:\Users\Muhammad Danial\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+260 silly mapToRegistry name native-base
+261 silly mapToRegistry using default registry
+262 silly mapToRegistry registry https://registry.npmjs.org/
+263 silly mapToRegistry data Result {
+263 silly mapToRegistry   raw: 'native-base',
+263 silly mapToRegistry   scope: null,
+263 silly mapToRegistry   escapedName: 'native-base',
+263 silly mapToRegistry   name: 'native-base',
+263 silly mapToRegistry   rawSpec: '',
+263 silly mapToRegistry   spec: 'latest',
+263 silly mapToRegistry   type: 'tag' }
+264 silly mapToRegistry uri https://registry.npmjs.org/native-base
+265 verbose addRemoteTarball https://registry.npmjs.org/native-base/-/native-base-2.3.3.tgz not in flight; adding
+266 verbose addRemoteTarball [ 'https://registry.npmjs.org/native-base/-/native-base-2.3.3.tgz',
+266 verbose addRemoteTarball   'de35234cf9cf8d24b5ce5e1720f8330dd5f3c96a' ]
+267 info retry fetch attempt 1 at 3:10:07 PM
+268 info attempt registry request try #1 at 3:10:07 PM
+269 http fetch GET https://registry.npmjs.org/native-base/-/native-base-2.3.3.tgz
+270 http 200 https://registry.npmjs.org/redux
+271 verbose headers { server: 'nginx/1.10.1',
+271 verbose headers   'content-type': 'application/json',
+271 verbose headers   'last-modified': 'Sat, 14 Oct 2017 23:03:40 GMT',
+271 verbose headers   etag: 'W/"59e297cc-29031"',
+271 verbose headers   'content-encoding': 'gzip',
+271 verbose headers   'cache-control': 'max-age=300',
+271 verbose headers   'content-length': '18168',
+271 verbose headers   'accept-ranges': 'bytes',
+271 verbose headers   date: 'Sun, 15 Oct 2017 10:10:08 GMT',
+271 verbose headers   via: '1.1 varnish',
+271 verbose headers   age: '44',
+271 verbose headers   connection: 'keep-alive',
+271 verbose headers   'x-served-by': 'cache-hkg17924-HKG',
+271 verbose headers   'x-cache': 'HIT',
+271 verbose headers   'x-cache-hits': '1',
+271 verbose headers   'x-timer': 'S1508062208.093267,VS0,VE0',
+271 verbose headers   vary: 'Accept-Encoding, Accept' }
+272 silly get cb [ 200,
+272 silly get   { server: 'nginx/1.10.1',
+272 silly get     'content-type': 'application/json',
+272 silly get     'last-modified': 'Sat, 14 Oct 2017 23:03:40 GMT',
+272 silly get     etag: 'W/"59e297cc-29031"',
+272 silly get     'content-encoding': 'gzip',
+272 silly get     'cache-control': 'max-age=300',
+272 silly get     'content-length': '18168',
+272 silly get     'accept-ranges': 'bytes',
+272 silly get     date: 'Sun, 15 Oct 2017 10:10:08 GMT',
+272 silly get     via: '1.1 varnish',
+272 silly get     age: '44',
+272 silly get     connection: 'keep-alive',
+272 silly get     'x-served-by': 'cache-hkg17924-HKG',
+272 silly get     'x-cache': 'HIT',
+272 silly get     'x-cache-hits': '1',
+272 silly get     'x-timer': 'S1508062208.093267,VS0,VE0',
+272 silly get     vary: 'Accept-Encoding, Accept' } ]
+273 verbose get saving redux to C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\registry.npmjs.org\redux\.cache.json
+274 verbose correctMkdir C:\Users\Muhammad Danial\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+275 silly resolveWithNewModule react-native-maps@0.16.4 checking installable status
+276 silly cache add args [ 'react-native-maps@^0.16.4', null ]
+277 verbose cache add spec react-native-maps@^0.16.4
+278 silly cache add parsed spec Result {
+278 silly cache add   raw: 'react-native-maps@^0.16.4',
+278 silly cache add   scope: null,
+278 silly cache add   escapedName: 'react-native-maps',
+278 silly cache add   name: 'react-native-maps',
+278 silly cache add   rawSpec: '^0.16.4',
+278 silly cache add   spec: '>=0.16.4 <0.17.0',
+278 silly cache add   type: 'range' }
+279 silly addNamed react-native-maps@>=0.16.4 <0.17.0
+280 verbose addNamed ">=0.16.4 <0.17.0" is a valid semver range for react-native-maps
+281 silly addNameRange { name: 'react-native-maps',
+281 silly addNameRange   range: '>=0.16.4 <0.17.0',
+281 silly addNameRange   hasData: false }
+282 silly mapToRegistry name react-native-maps
+283 silly mapToRegistry using default registry
+284 silly mapToRegistry registry https://registry.npmjs.org/
+285 silly mapToRegistry data Result {
+285 silly mapToRegistry   raw: 'react-native-maps',
+285 silly mapToRegistry   scope: null,
+285 silly mapToRegistry   escapedName: 'react-native-maps',
+285 silly mapToRegistry   name: 'react-native-maps',
+285 silly mapToRegistry   rawSpec: '',
+285 silly mapToRegistry   spec: 'latest',
+285 silly mapToRegistry   type: 'tag' }
+286 silly mapToRegistry uri https://registry.npmjs.org/react-native-maps
+287 verbose addNameRange registry:https://registry.npmjs.org/react-native-maps not in flight; fetching
+288 verbose get https://registry.npmjs.org/react-native-maps not expired, no request
+289 silly addNameRange number 2 { name: 'react-native-maps',
+289 silly addNameRange   range: '>=0.16.4 <0.17.0',
+289 silly addNameRange   hasData: true }
+290 silly addNameRange versions [ 'react-native-maps',
+290 silly addNameRange   [ '0.0.1',
+290 silly addNameRange     '0.1.0',
+290 silly addNameRange     '0.1.1',
+290 silly addNameRange     '0.1.2',
+290 silly addNameRange     '0.1.3',
+290 silly addNameRange     '0.2.0',
+290 silly addNameRange     '0.2.1',
+290 silly addNameRange     '0.2.2',
+290 silly addNameRange     '0.2.3',
+290 silly addNameRange     '0.3.0',
+290 silly addNameRange     '0.3.1',
+290 silly addNameRange     '0.3.2',
+290 silly addNameRange     '0.4.0',
+290 silly addNameRange     '0.4.1',
+290 silly addNameRange     '0.5.0',
+290 silly addNameRange     '0.4.2',
+290 silly addNameRange     '0.6.0',
+290 silly addNameRange     '0.7.0',
+290 silly addNameRange     '0.7.1',
+290 silly addNameRange     '0.8.0',
+290 silly addNameRange     '0.8.2',
+290 silly addNameRange     '0.9.0-rc.0',
+290 silly addNameRange     '0.9.0',
+290 silly addNameRange     '0.10.0',
+290 silly addNameRange     '0.10.1',
+290 silly addNameRange     '0.11.0',
+290 silly addNameRange     '0.10.2',
+290 silly addNameRange     '0.10.4',
+290 silly addNameRange     '0.12.1',
+290 silly addNameRange     '0.12.2',
+290 silly addNameRange     '0.12.3',
+290 silly addNameRange     '0.13.0',
+290 silly addNameRange     '0.12.4',
+290 silly addNameRange     '0.12.5',
+290 silly addNameRange     '0.13.1',
+290 silly addNameRange     '0.13.2-beta1',
+290 silly addNameRange     '0.14.0',
+290 silly addNameRange     '0.15.0',
+290 silly addNameRange     '0.15.1',
+290 silly addNameRange     '0.15.2',
+290 silly addNameRange     '0.15.3',
+290 silly addNameRange     '0.16.0',
+290 silly addNameRange     '0.16.1',
+290 silly addNameRange     '0.16.2',
+290 silly addNameRange     '0.16.3',
+290 silly addNameRange     '0.16.4',
+290 silly addNameRange     '0.17.0' ] ]
+291 silly addNamed react-native-maps@0.16.4
+292 verbose addNamed "0.16.4" is a plain semver version for react-native-maps
+293 silly resolveWithNewModule redux@3.7.2 checking installable status
+294 silly cache add args [ 'redux@^3.7.2', null ]
+295 verbose cache add spec redux@^3.7.2
+296 silly cache add parsed spec Result {
+296 silly cache add   raw: 'redux@^3.7.2',
+296 silly cache add   scope: null,
+296 silly cache add   escapedName: 'redux',
+296 silly cache add   name: 'redux',
+296 silly cache add   rawSpec: '^3.7.2',
+296 silly cache add   spec: '>=3.7.2 <4.0.0',
+296 silly cache add   type: 'range' }
+297 silly addNamed redux@>=3.7.2 <4.0.0
+298 verbose addNamed ">=3.7.2 <4.0.0" is a valid semver range for redux
+299 silly addNameRange { name: 'redux', range: '>=3.7.2 <4.0.0', hasData: false }
+300 silly mapToRegistry name redux
+301 silly mapToRegistry using default registry
+302 silly mapToRegistry registry https://registry.npmjs.org/
+303 silly mapToRegistry data Result {
+303 silly mapToRegistry   raw: 'redux',
+303 silly mapToRegistry   scope: null,
+303 silly mapToRegistry   escapedName: 'redux',
+303 silly mapToRegistry   name: 'redux',
+303 silly mapToRegistry   rawSpec: '',
+303 silly mapToRegistry   spec: 'latest',
+303 silly mapToRegistry   type: 'tag' }
+304 silly mapToRegistry uri https://registry.npmjs.org/redux
+305 verbose addNameRange registry:https://registry.npmjs.org/redux not in flight; fetching
+306 verbose get https://registry.npmjs.org/redux not expired, no request
+307 silly addNameRange number 2 { name: 'redux', range: '>=3.7.2 <4.0.0', hasData: true }
+308 silly addNameRange versions [ 'redux',
+308 silly addNameRange   [ '0.0.1',
+308 silly addNameRange     '0.0.2',
+308 silly addNameRange     '0.0.3',
+308 silly addNameRange     '0.0.4',
+308 silly addNameRange     '0.1.0',
+308 silly addNameRange     '0.2.0',
+308 silly addNameRange     '0.2.1',
+308 silly addNameRange     '0.2.2',
+308 silly addNameRange     '0.3.0',
+308 silly addNameRange     '0.3.1',
+308 silly addNameRange     '0.4.0',
+308 silly addNameRange     '0.5.0',
+308 silly addNameRange     '0.5.1',
+308 silly addNameRange     '0.6.0',
+308 silly addNameRange     '0.6.1',
+308 silly addNameRange     '0.6.2',
+308 silly addNameRange     '0.7.0',
+308 silly addNameRange     '0.8.0',
+308 silly addNameRange     '0.8.1',
+308 silly addNameRange     '0.9.0',
+308 silly addNameRange     '0.10.0',
+308 silly addNameRange     '0.10.1',
+308 silly addNameRange     '0.11.0',
+308 silly addNameRange     '0.11.1',
+308 silly addNameRange     '0.12.0',
+308 silly addNameRange     '1.0.0-alpha',
+308 silly addNameRange     '1.0.0-rc',
+308 silly addNameRange     '1.0.0',
+308 silly addNameRange     '1.0.1',
+308 silly addNameRange     '2.0.0',
+308 silly addNameRange     '3.0.0',
+308 silly addNameRange     '3.0.1',
+308 silly addNameRange     '3.0.2',
+308 silly addNameRange     '3.0.3',
+308 silly addNameRange     '3.0.4',
+308 silly addNameRange     '3.0.5',
+308 silly addNameRange     '3.0.6',
+308 silly addNameRange     '3.1.0',
+308 silly addNameRange     '3.1.1',
+308 silly addNameRange     '3.1.2',
+308 silly addNameRange     '3.1.3',
+308 silly addNameRange     '3.1.4',
+308 silly addNameRange     '3.1.5',
+308 silly addNameRange     '3.1.6',
+308 silly addNameRange     '3.1.7',
+308 silly addNameRange     '3.2.0',
+308 silly addNameRange     '3.2.1',
+308 silly addNameRange     '3.3.0',
+308 silly addNameRange     '3.3.1',
+308 silly addNameRange     '3.4.0',
+308 silly addNameRange     '3.5.0',
+308 silly addNameRange     '3.5.1',
+308 silly addNameRange     '3.5.2',
+308 silly addNameRange     '3.6.0',
+308 silly addNameRange     '3.7.0',
+308 silly addNameRange     '3.7.1',
+308 silly addNameRange     '3.7.2' ] ]
+309 silly addNamed redux@3.7.2
+310 verbose addNamed "3.7.2" is a plain semver version for redux
+311 silly cache afterAdd react-native-maps@0.16.4
+312 verbose afterAdd C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\react-native-maps\0.16.4\package\package.json not in flight; writing
+313 verbose correctMkdir C:\Users\Muhammad Danial\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+314 verbose afterAdd C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\react-native-maps\0.16.4\package\package.json written
+315 http fetch 200 https://registry.npmjs.org/react-native/-/react-native-0.49.1.tgz
+316 silly cache afterAdd redux@3.7.2
+317 verbose afterAdd C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\redux\3.7.2\package\package.json not in flight; writing
+318 verbose correctMkdir C:\Users\Muhammad Danial\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+319 verbose afterAdd C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\redux\3.7.2\package\package.json written
+320 http fetch 200 https://registry.npmjs.org/native-base/-/native-base-2.3.3.tgz
+321 http 304 https://registry.npmjs.org/react-navigation
+322 verbose headers { date: 'Sun, 15 Oct 2017 10:10:08 GMT',
+322 verbose headers   via: '1.1 varnish',
+322 verbose headers   'cache-control': 'max-age=300',
+322 verbose headers   etag: 'W/"59cbbd60-de10"',
+322 verbose headers   age: '265',
+322 verbose headers   connection: 'keep-alive',
+322 verbose headers   'x-served-by': 'cache-hkg17924-HKG',
+322 verbose headers   'x-cache': 'HIT',
+322 verbose headers   'x-cache-hits': '1',
+322 verbose headers   'x-timer': 'S1508062209.900263,VS0,VE0',
+322 verbose headers   vary: 'Accept-Encoding, Accept' }
+323 silly get cb [ 304,
+323 silly get   { date: 'Sun, 15 Oct 2017 10:10:08 GMT',
+323 silly get     via: '1.1 varnish',
+323 silly get     'cache-control': 'max-age=300',
+323 silly get     etag: 'W/"59cbbd60-de10"',
+323 silly get     age: '265',
+323 silly get     connection: 'keep-alive',
+323 silly get     'x-served-by': 'cache-hkg17924-HKG',
+323 silly get     'x-cache': 'HIT',
+323 silly get     'x-cache-hits': '1',
+323 silly get     'x-timer': 'S1508062209.900263,VS0,VE0',
+323 silly get     vary: 'Accept-Encoding, Accept' } ]
+324 verbose etag https://registry.npmjs.org/react-navigation from cache
+325 verbose get saving react-navigation to C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\registry.npmjs.org\react-navigation\.cache.json
+326 verbose correctMkdir C:\Users\Muhammad Danial\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+327 silly resolveWithNewModule react-navigation@1.0.0-beta.13 checking installable status
+328 silly cache add args [ 'react-navigation@^1.0.0-beta.11', null ]
+329 verbose cache add spec react-navigation@^1.0.0-beta.11
+330 silly cache add parsed spec Result {
+330 silly cache add   raw: 'react-navigation@^1.0.0-beta.11',
+330 silly cache add   scope: null,
+330 silly cache add   escapedName: 'react-navigation',
+330 silly cache add   name: 'react-navigation',
+330 silly cache add   rawSpec: '^1.0.0-beta.11',
+330 silly cache add   spec: '>=1.0.0-beta.11 <2.0.0',
+330 silly cache add   type: 'range' }
+331 silly addNamed react-navigation@>=1.0.0-beta.11 <2.0.0
+332 verbose addNamed ">=1.0.0-beta.11 <2.0.0" is a valid semver range for react-navigation
+333 silly addNameRange { name: 'react-navigation',
+333 silly addNameRange   range: '>=1.0.0-beta.11 <2.0.0',
+333 silly addNameRange   hasData: false }
+334 silly mapToRegistry name react-navigation
+335 silly mapToRegistry using default registry
+336 silly mapToRegistry registry https://registry.npmjs.org/
+337 silly mapToRegistry data Result {
+337 silly mapToRegistry   raw: 'react-navigation',
+337 silly mapToRegistry   scope: null,
+337 silly mapToRegistry   escapedName: 'react-navigation',
+337 silly mapToRegistry   name: 'react-navigation',
+337 silly mapToRegistry   rawSpec: '',
+337 silly mapToRegistry   spec: 'latest',
+337 silly mapToRegistry   type: 'tag' }
+338 silly mapToRegistry uri https://registry.npmjs.org/react-navigation
+339 verbose addNameRange registry:https://registry.npmjs.org/react-navigation not in flight; fetching
+340 verbose get https://registry.npmjs.org/react-navigation not expired, no request
+341 silly addNameRange number 2 { name: 'react-navigation',
+341 silly addNameRange   range: '>=1.0.0-beta.11 <2.0.0',
+341 silly addNameRange   hasData: true }
+342 silly addNameRange versions [ 'react-navigation',
+342 silly addNameRange   [ '0.0.0',
+342 silly addNameRange     '1.0.0-beta.1',
+342 silly addNameRange     '1.0.0-beta.2',
+342 silly addNameRange     '1.0.0-beta.3',
+342 silly addNameRange     '1.0.0-beta.4',
+342 silly addNameRange     '1.0.0-beta.5',
+342 silly addNameRange     '1.0.0-beta.6',
+342 silly addNameRange     '1.0.0-beta.7',
+342 silly addNameRange     '1.0.0-beta.8',
+342 silly addNameRange     '1.0.0-beta.9',
+342 silly addNameRange     '1.0.0-beta.10',
+342 silly addNameRange     '1.0.0-beta.11',
+342 silly addNameRange     '1.0.0-beta.12',
+342 silly addNameRange     '1.0.0-beta.13' ] ]
+343 silly addNamed react-navigation@1.0.0-beta.13
+344 verbose addNamed "1.0.0-beta.13" is a plain semver version for react-navigation
+345 silly cache afterAdd react-navigation@1.0.0-beta.13
+346 verbose afterAdd C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\react-navigation\1.0.0-beta.13\package\package.json not in flight; writing
+347 verbose correctMkdir C:\Users\Muhammad Danial\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+348 verbose afterAdd C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\react-navigation\1.0.0-beta.13\package\package.json written
+349 http 200 https://registry.npmjs.org/redux-thunk
+350 verbose headers { server: 'nginx/1.10.1',
+350 verbose headers   'content-type': 'application/json',
+350 verbose headers   'last-modified': 'Mon, 09 Oct 2017 11:05:34 GMT',
+350 verbose headers   etag: 'W/"59db57fe-8581"',
+350 verbose headers   'content-encoding': 'gzip',
+350 verbose headers   'cache-control': 'max-age=300',
+350 verbose headers   'content-length': '6443',
+350 verbose headers   'accept-ranges': 'bytes',
+350 verbose headers   date: 'Sun, 15 Oct 2017 10:10:08 GMT',
+350 verbose headers   via: '1.1 varnish',
+350 verbose headers   age: '44',
+350 verbose headers   connection: 'keep-alive',
+350 verbose headers   'x-served-by': 'cache-hkg17927-HKG',
+350 verbose headers   'x-cache': 'HIT',
+350 verbose headers   'x-cache-hits': '1',
+350 verbose headers   'x-timer': 'S1508062208.086188,VS0,VE0',
+350 verbose headers   vary: 'Accept-Encoding, Accept' }
+351 silly get cb [ 200,
+351 silly get   { server: 'nginx/1.10.1',
+351 silly get     'content-type': 'application/json',
+351 silly get     'last-modified': 'Mon, 09 Oct 2017 11:05:34 GMT',
+351 silly get     etag: 'W/"59db57fe-8581"',
+351 silly get     'content-encoding': 'gzip',
+351 silly get     'cache-control': 'max-age=300',
+351 silly get     'content-length': '6443',
+351 silly get     'accept-ranges': 'bytes',
+351 silly get     date: 'Sun, 15 Oct 2017 10:10:08 GMT',
+351 silly get     via: '1.1 varnish',
+351 silly get     age: '44',
+351 silly get     connection: 'keep-alive',
+351 silly get     'x-served-by': 'cache-hkg17927-HKG',
+351 silly get     'x-cache': 'HIT',
+351 silly get     'x-cache-hits': '1',
+351 silly get     'x-timer': 'S1508062208.086188,VS0,VE0',
+351 silly get     vary: 'Accept-Encoding, Accept' } ]
+352 verbose get saving redux-thunk to C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\registry.npmjs.org\redux-thunk\.cache.json
+353 verbose correctMkdir C:\Users\Muhammad Danial\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+354 silly resolveWithNewModule redux-thunk@2.2.0 checking installable status
+355 silly cache add args [ 'redux-thunk@^2.2.0', null ]
+356 verbose cache add spec redux-thunk@^2.2.0
+357 silly cache add parsed spec Result {
+357 silly cache add   raw: 'redux-thunk@^2.2.0',
+357 silly cache add   scope: null,
+357 silly cache add   escapedName: 'redux-thunk',
+357 silly cache add   name: 'redux-thunk',
+357 silly cache add   rawSpec: '^2.2.0',
+357 silly cache add   spec: '>=2.2.0 <3.0.0',
+357 silly cache add   type: 'range' }
+358 silly addNamed redux-thunk@>=2.2.0 <3.0.0
+359 verbose addNamed ">=2.2.0 <3.0.0" is a valid semver range for redux-thunk
+360 silly addNameRange { name: 'redux-thunk', range: '>=2.2.0 <3.0.0', hasData: false }
+361 silly mapToRegistry name redux-thunk
+362 silly mapToRegistry using default registry
+363 silly mapToRegistry registry https://registry.npmjs.org/
+364 silly mapToRegistry data Result {
+364 silly mapToRegistry   raw: 'redux-thunk',
+364 silly mapToRegistry   scope: null,
+364 silly mapToRegistry   escapedName: 'redux-thunk',
+364 silly mapToRegistry   name: 'redux-thunk',
+364 silly mapToRegistry   rawSpec: '',
+364 silly mapToRegistry   spec: 'latest',
+364 silly mapToRegistry   type: 'tag' }
+365 silly mapToRegistry uri https://registry.npmjs.org/redux-thunk
+366 verbose addNameRange registry:https://registry.npmjs.org/redux-thunk not in flight; fetching
+367 verbose get https://registry.npmjs.org/redux-thunk not expired, no request
+368 silly addNameRange number 2 { name: 'redux-thunk', range: '>=2.2.0 <3.0.0', hasData: true }
+369 silly addNameRange versions [ 'redux-thunk',
+369 silly addNameRange   [ '0.1.0',
+369 silly addNameRange     '1.0.0',
+369 silly addNameRange     '1.0.1',
+369 silly addNameRange     '1.0.2',
+369 silly addNameRange     '1.0.3',
+369 silly addNameRange     '2.0.1',
+369 silly addNameRange     '2.1.0',
+369 silly addNameRange     '2.1.1',
+369 silly addNameRange     '2.1.2',
+369 silly addNameRange     '2.2.0' ] ]
+370 silly addNamed redux-thunk@2.2.0
+371 verbose addNamed "2.2.0" is a plain semver version for redux-thunk
+372 silly cache afterAdd redux-thunk@2.2.0
+373 verbose afterAdd C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\redux-thunk\2.2.0\package\package.json not in flight; writing
+374 verbose correctMkdir C:\Users\Muhammad Danial\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+375 verbose afterAdd C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\redux-thunk\2.2.0\package\package.json written
+376 http 200 https://registry.npmjs.org/firebase
+377 verbose headers { server: 'nginx/1.10.1',
+377 verbose headers   'content-type': 'application/json',
+377 verbose headers   'last-modified': 'Thu, 12 Oct 2017 20:32:03 GMT',
+377 verbose headers   etag: 'W/"59dfd143-25a85"',
+377 verbose headers   'content-encoding': 'gzip',
+377 verbose headers   'cache-control': 'max-age=300',
+377 verbose headers   'content-length': '15720',
+377 verbose headers   'accept-ranges': 'bytes',
+377 verbose headers   date: 'Sun, 15 Oct 2017 10:10:08 GMT',
+377 verbose headers   via: '1.1 varnish',
+377 verbose headers   age: '266',
+377 verbose headers   connection: 'keep-alive',
+377 verbose headers   'x-served-by': 'cache-hkg17930-HKG',
+377 verbose headers   'x-cache': 'HIT',
+377 verbose headers   'x-cache-hits': '1',
+377 verbose headers   'x-timer': 'S1508062208.082914,VS0,VE0',
+377 verbose headers   vary: 'Accept-Encoding, Accept' }
+378 silly get cb [ 200,
+378 silly get   { server: 'nginx/1.10.1',
+378 silly get     'content-type': 'application/json',
+378 silly get     'last-modified': 'Thu, 12 Oct 2017 20:32:03 GMT',
+378 silly get     etag: 'W/"59dfd143-25a85"',
+378 silly get     'content-encoding': 'gzip',
+378 silly get     'cache-control': 'max-age=300',
+378 silly get     'content-length': '15720',
+378 silly get     'accept-ranges': 'bytes',
+378 silly get     date: 'Sun, 15 Oct 2017 10:10:08 GMT',
+378 silly get     via: '1.1 varnish',
+378 silly get     age: '266',
+378 silly get     connection: 'keep-alive',
+378 silly get     'x-served-by': 'cache-hkg17930-HKG',
+378 silly get     'x-cache': 'HIT',
+378 silly get     'x-cache-hits': '1',
+378 silly get     'x-timer': 'S1508062208.082914,VS0,VE0',
+378 silly get     vary: 'Accept-Encoding, Accept' } ]
+379 verbose get saving firebase to C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\registry.npmjs.org\firebase\.cache.json
+380 verbose correctMkdir C:\Users\Muhammad Danial\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+381 silly resolveWithNewModule firebase@4.5.1 checking installable status
+382 silly cache add args [ 'firebase@^4.3.0', null ]
+383 verbose cache add spec firebase@^4.3.0
+384 silly cache add parsed spec Result {
+384 silly cache add   raw: 'firebase@^4.3.0',
+384 silly cache add   scope: null,
+384 silly cache add   escapedName: 'firebase',
+384 silly cache add   name: 'firebase',
+384 silly cache add   rawSpec: '^4.3.0',
+384 silly cache add   spec: '>=4.3.0 <5.0.0',
+384 silly cache add   type: 'range' }
+385 silly addNamed firebase@>=4.3.0 <5.0.0
+386 verbose addNamed ">=4.3.0 <5.0.0" is a valid semver range for firebase
+387 silly addNameRange { name: 'firebase', range: '>=4.3.0 <5.0.0', hasData: false }
+388 silly mapToRegistry name firebase
+389 silly mapToRegistry using default registry
+390 silly mapToRegistry registry https://registry.npmjs.org/
+391 silly mapToRegistry data Result {
+391 silly mapToRegistry   raw: 'firebase',
+391 silly mapToRegistry   scope: null,
+391 silly mapToRegistry   escapedName: 'firebase',
+391 silly mapToRegistry   name: 'firebase',
+391 silly mapToRegistry   rawSpec: '',
+391 silly mapToRegistry   spec: 'latest',
+391 silly mapToRegistry   type: 'tag' }
+392 silly mapToRegistry uri https://registry.npmjs.org/firebase
+393 verbose addNameRange registry:https://registry.npmjs.org/firebase not in flight; fetching
+394 verbose get https://registry.npmjs.org/firebase not expired, no request
+395 silly addNameRange number 2 { name: 'firebase', range: '>=4.3.0 <5.0.0', hasData: true }
+396 silly addNameRange versions [ 'firebase',
+396 silly addNameRange   [ '0.0.0',
+396 silly addNameRange     '0.5.0',
+396 silly addNameRange     '0.5.1',
+396 silly addNameRange     '0.5.2',
+396 silly addNameRange     '0.5.3',
+396 silly addNameRange     '0.5.4',
+396 silly addNameRange     '0.6.0',
+396 silly addNameRange     '0.6.1',
+396 silly addNameRange     '0.6.2',
+396 silly addNameRange     '0.6.3',
+396 silly addNameRange     '0.6.4',
+396 silly addNameRange     '0.6.5',
+396 silly addNameRange     '0.6.6',
+396 silly addNameRange     '0.6.7',
+396 silly addNameRange     '0.6.8',
+396 silly addNameRange     '0.6.9',
+396 silly addNameRange     '0.6.10',
+396 silly addNameRange     '0.6.11',
+396 silly addNameRange     '0.6.14',
+396 silly addNameRange     '0.6.15',
+396 silly addNameRange     '0.6.16',
+396 silly addNameRange     '0.6.17',
+396 silly addNameRange     '0.6.19',
+396 silly addNameRange     '0.6.21',
+396 silly addNameRange     '0.6.22',
+396 silly addNameRange     '1.0.1',
+396 silly addNameRange     '1.0.1-npm',
+396 silly addNameRange     '1.0.2',
+396 silly addNameRange     '1.0.3',
+396 silly addNameRange     '1.0.4',
+396 silly addNameRange     '1.0.5',
+396 silly addNameRange     '1.0.10',
+396 silly addNameRange     '1.0.10-2',
+396 silly addNameRange     '1.0.11',
+396 silly addNameRange     '1.0.12',
+396 silly addNameRange     '1.0.13',
+396 silly addNameRange     '1.0.14',
+396 silly addNameRange     '1.0.15',
+396 silly addNameRange     '1.0.15-2',
+396 silly addNameRange     '1.0.15-3',
+396 silly addNameRange     '1.0.17',
+396 silly addNameRange     '1.0.18',
+396 silly addNameRange     '1.0.19',
+396 silly addNameRange     '1.0.20',
+396 silly addNameRange     '1.0.21',
+396 silly addNameRange     '1.0.23',
+396 silly addNameRange     '1.0.24',
+396 silly addNameRange     '1.1.0',
+396 silly addNameRange     '1.1.1',
+396 silly addNameRange     '1.1.2',
+396 silly addNameRange     '1.2.0-beta.1-0',
+396 silly addNameRange     '1.2.0-beta.2',
+396 silly addNameRange     '1.1.3',
+396 silly addNameRange     '1.2.0-beta.3',
+396 silly addNameRange     '2.0.0',
+396 silly addNameRange     '2.0.1',
+396 silly addNameRange     '2.0.2',
+396 silly addNameRange     '2.0.3',
+396 silly addNameRange     '2.0.4',
+396 silly addNameRange     '2.0.5',
+396 silly addNameRange     '2.0.6',
+396 silly addNameRange     '2.1.0',
+396 silly addNameRange     '2.1.1',
+396 silly addNameRange     '2.1.2',
+396 silly addNameRange     '1.2.0',
+396 silly addNameRange     '2.2.0',
+396 silly addNameRange     '2.2.1',
+396 silly addNameRange     '2.2.2',
+396 silly addNameRange     '2.2.3',
+396 silly addNameRange     '2.2.4',
+396 silly addNameRange     '2.2.5',
+396 silly addNameRange     '2.2.6',
+396 silly addNameRange     '2.2.7',
+396 silly addNameRange     '2.2.8',
+396 silly addNameRange     '2.2.9',
+396 silly addNameRange     '2.3.0',
+396 silly addNameRange     '2.3.1',
+396 silly addNameRange     '2.3.2',
+396 silly addNameRange     '2.4.0',
+396 silly addNameRange     '2.4.1',
+396 silly addNameRange     '2.4.2',
+396 silly addNameRange     '3.0.0',
+396 silly addNameRange     '3.0.1',
+396 silly addNameRange     '3.0.2',
+396 silly addNameRange     '3.0.3',
+396 silly addNameRange     '3.0.4',
+396 silly addNameRange     '3.0.5',
+396 silly addNameRange     '3.1.0',
+396 silly addNameRange     '3.2.0',
+396 silly addNameRange     '3.2.1',
+396 silly addNameRange     '3.3.0',
+396 silly addNameRange     '3.3.1',
+396 silly addNameRange     '3.3.2',
+396 silly addNameRange     '3.4.0',
+396 silly addNameRange     '3.4.1',
+396 silly addNameRange     '3.5.0',
+396 silly addNameRange     '3.5.1',
+396 silly addNameRange     '3.5.2',
+396 silly addNameRange     '3.5.3',
+396 silly addNameRange     '3.6.0',
+396 silly addNameRange     ... 34 more items ] ]
+397 silly addNamed firebase@4.5.1
+398 verbose addNamed "4.5.1" is a plain semver version for firebase
+399 silly mapToRegistry name firebase
+400 silly mapToRegistry using default registry
+401 silly mapToRegistry registry https://registry.npmjs.org/
+402 silly mapToRegistry data Result {
+402 silly mapToRegistry   raw: 'firebase',
+402 silly mapToRegistry   scope: null,
+402 silly mapToRegistry   escapedName: 'firebase',
+402 silly mapToRegistry   name: 'firebase',
+402 silly mapToRegistry   rawSpec: '',
+402 silly mapToRegistry   spec: 'latest',
+402 silly mapToRegistry   type: 'tag' }
+403 silly mapToRegistry uri https://registry.npmjs.org/firebase
+404 verbose addRemoteTarball https://registry.npmjs.org/firebase/-/firebase-4.5.1.tgz not in flight; adding
+405 verbose addRemoteTarball [ 'https://registry.npmjs.org/firebase/-/firebase-4.5.1.tgz',
+405 verbose addRemoteTarball   '882365d350c9bbbe3fe0731343776963cedefd9d' ]
+406 info retry fetch attempt 1 at 3:10:08 PM
+407 info attempt registry request try #1 at 3:10:08 PM
+408 http fetch GET https://registry.npmjs.org/firebase/-/firebase-4.5.1.tgz
+409 http fetch 200 https://registry.npmjs.org/firebase/-/firebase-4.5.1.tgz
+410 http 200 https://registry.npmjs.org/axios
+411 verbose headers { server: 'nginx/1.10.3',
+411 verbose headers   'content-type': 'application/json',
+411 verbose headers   'last-modified': 'Fri, 13 Oct 2017 21:52:41 GMT',
+411 verbose headers   etag: 'W/"59e135a9-173e7"',
+411 verbose headers   'content-encoding': 'gzip',
+411 verbose headers   'cache-control': 'max-age=300',
+411 verbose headers   'content-length': '14804',
+411 verbose headers   'accept-ranges': 'bytes',
+411 verbose headers   date: 'Sun, 15 Oct 2017 10:10:08 GMT',
+411 verbose headers   via: '1.1 varnish',
+411 verbose headers   age: '291',
+411 verbose headers   connection: 'keep-alive',
+411 verbose headers   'x-served-by': 'cache-hkg17928-HKG',
+411 verbose headers   'x-cache': 'HIT',
+411 verbose headers   'x-cache-hits': '2',
+411 verbose headers   'x-timer': 'S1508062208.076067,VS0,VE0',
+411 verbose headers   vary: 'Accept-Encoding, Accept' }
+412 silly get cb [ 200,
+412 silly get   { server: 'nginx/1.10.3',
+412 silly get     'content-type': 'application/json',
+412 silly get     'last-modified': 'Fri, 13 Oct 2017 21:52:41 GMT',
+412 silly get     etag: 'W/"59e135a9-173e7"',
+412 silly get     'content-encoding': 'gzip',
+412 silly get     'cache-control': 'max-age=300',
+412 silly get     'content-length': '14804',
+412 silly get     'accept-ranges': 'bytes',
+412 silly get     date: 'Sun, 15 Oct 2017 10:10:08 GMT',
+412 silly get     via: '1.1 varnish',
+412 silly get     age: '291',
+412 silly get     connection: 'keep-alive',
+412 silly get     'x-served-by': 'cache-hkg17928-HKG',
+412 silly get     'x-cache': 'HIT',
+412 silly get     'x-cache-hits': '2',
+412 silly get     'x-timer': 'S1508062208.076067,VS0,VE0',
+412 silly get     vary: 'Accept-Encoding, Accept' } ]
+413 verbose get saving axios to C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\registry.npmjs.org\axios\.cache.json
+414 verbose correctMkdir C:\Users\Muhammad Danial\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+415 silly resolveWithNewModule axios@0.16.2 checking installable status
+416 silly cache add args [ 'axios@^0.16.2', null ]
+417 verbose cache add spec axios@^0.16.2
+418 silly cache add parsed spec Result {
+418 silly cache add   raw: 'axios@^0.16.2',
+418 silly cache add   scope: null,
+418 silly cache add   escapedName: 'axios',
+418 silly cache add   name: 'axios',
+418 silly cache add   rawSpec: '^0.16.2',
+418 silly cache add   spec: '>=0.16.2 <0.17.0',
+418 silly cache add   type: 'range' }
+419 silly addNamed axios@>=0.16.2 <0.17.0
+420 verbose addNamed ">=0.16.2 <0.17.0" is a valid semver range for axios
+421 silly addNameRange { name: 'axios', range: '>=0.16.2 <0.17.0', hasData: false }
+422 silly mapToRegistry name axios
+423 silly mapToRegistry using default registry
+424 silly mapToRegistry registry https://registry.npmjs.org/
+425 silly mapToRegistry data Result {
+425 silly mapToRegistry   raw: 'axios',
+425 silly mapToRegistry   scope: null,
+425 silly mapToRegistry   escapedName: 'axios',
+425 silly mapToRegistry   name: 'axios',
+425 silly mapToRegistry   rawSpec: '',
+425 silly mapToRegistry   spec: 'latest',
+425 silly mapToRegistry   type: 'tag' }
+426 silly mapToRegistry uri https://registry.npmjs.org/axios
+427 verbose addNameRange registry:https://registry.npmjs.org/axios not in flight; fetching
+428 verbose get https://registry.npmjs.org/axios not expired, no request
+429 silly addNameRange number 2 { name: 'axios', range: '>=0.16.2 <0.17.0', hasData: true }
+430 silly addNameRange versions [ 'axios',
+430 silly addNameRange   [ '0.1.0',
+430 silly addNameRange     '0.2.0',
+430 silly addNameRange     '0.2.1',
+430 silly addNameRange     '0.2.2',
+430 silly addNameRange     '0.3.0',
+430 silly addNameRange     '0.3.1',
+430 silly addNameRange     '0.4.0',
+430 silly addNameRange     '0.4.1',
+430 silly addNameRange     '0.4.2',
+430 silly addNameRange     '0.5.0',
+430 silly addNameRange     '0.5.1',
+430 silly addNameRange     '0.5.2',
+430 silly addNameRange     '0.5.3',
+430 silly addNameRange     '0.5.4',
+430 silly addNameRange     '0.6.0',
+430 silly addNameRange     '0.7.0',
+430 silly addNameRange     '0.8.0',
+430 silly addNameRange     '0.8.1',
+430 silly addNameRange     '0.9.0',
+430 silly addNameRange     '0.9.1',
+430 silly addNameRange     '0.10.0',
+430 silly addNameRange     '0.11.0',
+430 silly addNameRange     '0.11.1',
+430 silly addNameRange     '0.12.0',
+430 silly addNameRange     '0.13.0',
+430 silly addNameRange     '0.13.1',
+430 silly addNameRange     '0.14.0',
+430 silly addNameRange     '0.15.0',
+430 silly addNameRange     '0.15.1',
+430 silly addNameRange     '0.15.2',
+430 silly addNameRange     '0.15.3',
+430 silly addNameRange     '0.16.0',
+430 silly addNameRange     '0.16.1',
+430 silly addNameRange     '0.16.2' ] ]
+431 silly addNamed axios@0.16.2
+432 verbose addNamed "0.16.2" is a plain semver version for axios
+433 silly cache afterAdd axios@0.16.2
+434 verbose afterAdd C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\axios\0.16.2\package\package.json not in flight; writing
+435 verbose correctMkdir C:\Users\Muhammad Danial\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+436 verbose afterAdd C:\Users\Muhammad Danial\AppData\Roaming\npm-cache\axios\0.16.2\package\package.json written
+437 verbose stack Error: kill ENOSYS
+437 verbose stack     at exports._errnoException (util.js:1022:11)
+437 verbose stack     at process.kill (internal/process.js:172:13)
+437 verbose stack     at process.listener (C:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:86:15)
+437 verbose stack     at emitNone (events.js:91:20)
+437 verbose stack     at process.emit (events.js:185:7)
+437 verbose stack     at processEmit (C:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+437 verbose stack     at processEmit (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+437 verbose stack     at Signal.wrap.onsignal (internal/process.js:199:44)
+438 verbose cwd C:\Users\Muhammad Danial\Desktop\hackathon
+439 error Windows_NT 10.0.15063
+440 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+441 error node v6.9.5
+442 error npm  v3.10.10
+443 error code ENOSYS
+444 error errno ENOSYS
+445 error syscall kill
+446 error kill ENOSYS
+447 error If you need help, you may report this error at:
+447 error     <https://github.com/npm/npm/issues>
+448 verbose exit [ 1, true ]

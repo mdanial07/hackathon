@@ -19,11 +19,11 @@ import ProfileDetails from './Components/Profile/details'
 // import TabsNav from './Components/TabsNav/tabsNav'
 
 const Naviagte = StackNavigator({
+    login: { screen: Login },
     maps: { screen: Maps },
     circles: { screen: Circles },
     profiledetails: { screen: ProfileDetails },
     profile: { screen: Profile },
-    login: { screen: Login },
     joincircle: { screen: JoinCircle },
     circleDetails: { screen: CirclesDetails },
     homePage: { screen: HomePage },

@@ -10,7 +10,7 @@ import * as firebase from "firebase";
 function mapDispatchToProps(dispatch) {
     return {
         createUser: (users) => dispatch(SignupMiddleware.createUser(users)),
-        getAllUsers: () => dispatch(SignupMiddleware.getAllUsers()),
+        // getAllUsers: () => dispatch(SignupMiddleware.getAllUsers()),
 
     }
 }
@@ -33,6 +33,9 @@ class Signup extends Component {
             password: '',
             usersAllData: [],
             user: [],
+            latitude: '',
+            longitude: '',
+
         }
     }
 
@@ -51,29 +54,26 @@ class Signup extends Component {
     componentWillMount() {
 
         console.disableYellowBox = true;
-        // console.log(this.props.allUsers);
-
-        this.props.getAllUsers();
-
-        console.log("dadsda", this.props.signup)
-
-
-        // firebase.database().ref('/patientsApp/').on('value', (data) => {
-
-        //     let obj = data.val();
-        //     console.log(obj)
-        // })
-
-
-
-        // console.disableYellowBox = true;
-        // AsyncStorage.getItem('users', (err, result) => {
-        //     if (result !== null) {
-        //         let data = JSON.parse(result);
-        //         this.setState({ user: data });
-        //         console.log(this.state.user, 'dadadadada');
-        //     }
-        // })
+        // this.props.getAllUsers();
+        navigator.geolocation.getCurrentPosition((pos) => {
+            console.log(pos.coords)
+            var crd = pos.coords;
+            console.log(crd.latitude)
+            this.setState({
+                latitude: crd.latitude,
+                longitude: crd.longitude
+            })
+        },
+            (err) => {
+                alert('check your network conectivity and location or gps')
+            }),
+            () => {
+                var options = {
+                    enableHighAccuracy: true,
+                    timeout: 5000,
+                    maximumAge: 0
+                };
+            }
     }
 
     createAnAccount = (e) => {
@@ -92,6 +92,8 @@ class Signup extends Component {
             sname: this.state.sname,
             email: this.state.email,
             pass: this.state.password,
+            longitude: this.state.longitude,
+            latitude: this.state.latitude,
         }
 
         console.log(obj);
@@ -178,7 +180,7 @@ class Signup extends Component {
                         } */}
                         <Text style={{ color: '#fff', fontSize: 12, textAlign: 'center', marginTop: 10 }}> Forgot your login details?<Text style={{ fontWeight: 'bold', }}> Get login help.</Text> </Text>
                     </Content>
-                    <Footer style={{ backgroundColor: 'none',height: 100 }}>
+                    <Footer style={{ backgroundColor: 'none', height: 100 }}>
                         <Button block rounded style={{ backgroundColor: 'rgba(45,92,227, 0.7 )', padding: 10, width: 240 }} onPress={() => { this.props.navigation.navigate('login') }}>
                             <Text style={{ color: '#fff', }} >Already have account </Text>
                         </Button>

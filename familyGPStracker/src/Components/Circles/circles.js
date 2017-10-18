@@ -33,6 +33,7 @@ class Circles extends Component {
 
 
     componentWillMount() {
+        console.disableYellowBox = true;
         AsyncStorage.getItem('familytracker', (err, result) => {
             if (result !== null) {
                 let data = JSON.parse(result);

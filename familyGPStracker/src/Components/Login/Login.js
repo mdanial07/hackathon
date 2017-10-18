@@ -39,11 +39,11 @@ class Login extends Component {
                 var email = data.email;
                 var pass = data.pass;
                 console.log(email, pass)
-                firebase.auth().signInWithEmailAndPassword(email, pass)
-                    .then((user) => {
-                        console.log("dadad")
-                        this.props.navigation.navigate('maps')
-                    })
+                // firebase.auth().signInWithEmailAndPassword(email, pass)
+                //     .then((user) => {
+                //         console.log("dadad")
+                //         this.props.navigation.navigate('maps')
+                //     })
             }
         });
 

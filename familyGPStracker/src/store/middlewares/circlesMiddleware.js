@@ -52,12 +52,21 @@ export class CircleMiddleware {
                     array.push(userData[data])
                 }
                 console.log(array)
+                let CirclesForthisUser = []
+                array.map((u, i) => {
+                    return u.members.map((mem, k) => {
+                        if (uid == mem.uid) {
+                            CirclesForthisUser.push(u);
+                        }
+                    })
+                })
 
+                console.log(CirclesForthisUser)
                 // array.map((v, i) => {
                 //     return 
                 //     })
                 // })
-                dispatch(CirclesAction.getAllCircles(array));
+                dispatch(CirclesAction.getAllCircles(CirclesForthisUser));
             })
         }
     }
@@ -66,8 +75,10 @@ export class CircleMiddleware {
         return (dispatch) => {
             let joinCode = code;
             let user = member
+            let uid = member.uid
             let circleKey = ''
             let array = []
+            let membersArray = []
 
             firebase.database().ref('/Circles/').on('value', (data) => {
                 let userData = data.val();
@@ -79,38 +90,74 @@ export class CircleMiddleware {
                     console.log(value)
                     if (value.key == joinCode) {
                         circleKey = value.mainKey
-                        array = value.members
+                        membersArray = value.members
+                        let memberExist = false;
+
+                        for (var i = 0; i < membersArray.length; i++) {
+                            if (uid == membersArray[i].uid) {
+                                memberExist = true;
+                                break;
+                            }
+                        }
+                        if (memberExist) {
+                            Toast.show({
+                                text: 'You are already a member',
+                                position: 'bottom',
+                                buttonText: 'Okay'
+                            });
+                        }
+                        else {
+                            membersArray.push(user)
+                            firebase.database().ref(`/Circles/${circleKey}/members/`).set(membersArray)
+                                .then((user) => {
+                                    Toast.show({
+                                        text: 'You Successfully Join!',
+                                        position: 'bottom',
+                                        buttonText: 'Okay'
+                                    });
+                                })
+                                .catch(function (error) {
+                                    var errorCode = error.code;
+                                    var errorMessage = error.message;
+                                    Toast.show({
+                                        text: errorMessage,
+                                        position: 'bottom',
+                                        buttonText: 'Okay'
+                                    });
+                                });
+                        }
+                    }
+                    else {
                         Toast.show({
-                            text: 'Circle Join Successfully!',
+                            text: 'Invalid Key !!!',
                             position: 'bottom',
                             buttonText: 'Okay'
                         });
                     }
-                    else {
-                        console.log("there is something missing")
-                    }
                 })
+                // array['members'] = membersArray
+                console.log(membersArray)
                 console.log(array)
                 console.log(userData)
             })
 
-            firebase.database().ref(`/Circles/${circleKey}/members`).push(user)
-                .then((user) => {
-                    Toast.show({
-                        text: 'You SuccessFully Join !',
-                        position: 'bottom',
-                        buttonText: 'Okay'
-                    });
-                })
-                .catch(function (error) {
-                    var errorCode = error.code;
-                    var errorMessage = error.message;
-                    Toast.show({
-                        text: errorMessage,
-                        position: 'bottom',
-                        buttonText: 'Okay'
-                    });
-                });
+            // firebase.database().ref(`/Circles/${circleKey}/members/`).set(membersArray)
+            //     .then((user) => {
+            //         Toast.show({
+            //             text: 'You Successfully Join!',
+            //             position: 'bottom',
+            //             buttonText: 'Okay'
+            //         });
+            //     })
+            //     .catch(function (error) {
+            //         var errorCode = error.code;
+            //         var errorMessage = error.message;
+            //         Toast.show({
+            //             text: errorMessage,
+            //             position: 'bottom',
+            //             buttonText: 'Okay'
+            //         });
+            //     });
         }
     }
 }

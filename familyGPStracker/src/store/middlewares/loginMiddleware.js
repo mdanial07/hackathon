@@ -69,6 +69,8 @@ export class LoginMiddleware {
                                 pass: doc.pass,
                                 fname: doc.fname,
                                 sname: doc.sname,
+                                latitude: doc.latitude,
+                                longitude: doc.longitude,
                             }
                         )
                     }

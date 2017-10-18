@@ -33,10 +33,8 @@ class CirclesDetails extends Component {
     }
 
     componentWillMount() {
+        console.disableYellowBox = true;
         this.props.getAllCircles();
-
-
-
         let k = this.props.navigation.state.params.keys
         let ownername = this.props.navigation.state.params.ownername
         let keyV = this.props.navigation.state.params.keyValue
@@ -105,7 +103,7 @@ class CirclesDetails extends Component {
                                 return (
                                     <View key={k} style={{ marginTop: '4%', marginLeft: '2%', flexDirection: 'row', flexWrap: 'wrap' }} >
                                         <View style={{ flexDirection: 'column' }}>
-                                            <Thumbnail style={{ marginTop: '4%', marginLeft: '2%' }} large source={{ uri: 'https://scontent.fkhi9-1.fna.fbcdn.net/v/t1.0-9/21432894_1192746394162794_1096900880755878585_n.jpg?oh=ef1d58816ee341804cbcd9f366528413&oe=5A5314D1' }} />
+                                            <Thumbnail style={{ marginTop: '4%', marginLeft: '2%' }} large source={{ uri: 'https://lh3.ggpht.com/lafQ8MEh6Gh0NU2GzCEhxxugOeqKTOJemc1liIga3anzvksjfCv5OY0fC6HiqsReUtw=w300' }} />
                                             <Text style={{ fontSize: 10, width: 70, textAlign: 'center', alignSelf: 'center' }}>{value.name} </Text>
                                         </View>
                                     </View>

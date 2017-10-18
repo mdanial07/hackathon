@@ -79,6 +79,8 @@ class CreateCircle extends Component {
             this.setState({
                 circleName: '',
             })
+
+            this.props.navigation.navigate('circles')
         }
     }
 
