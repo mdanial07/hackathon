@@ -38,13 +38,60 @@ export class CircleMiddleware {
         }
     }
 
+    // static ViewMapShow(userID) {
+    //     return (dispatch) => {
+    //         console.log(userID)
+    //         let array = [];
+    //         let NewArray = [];
+    //         userID.map((uid, k) => {
+    //             return firebase.database().ref(`/Users/${uid}`).on('value', (data) => {
+    //                 let userData = data.val();
+    //                 array.push(userData);
+    //                 console.log(userData)
+    //                 // for (var data in userData) {
+    //                 //     array.push(userData[data])
+    //                 // }
+    //                 console.log(array)
+    //                 dispatch(CirclesAction.ViewMapShow(array));
+    //                 NewArray == array
+    //             })
+    //             console.log(array);
+    //         })
+
+    //         console.log(NewArray)
+
+
+    //         // firebase.database().ref(`/Users/`).on('value', (data) => {
+    //         //     let array = [];
+    //         //     let userArray = []
+    //         //     let userData = data.val();
+    //         //     // array.push(userData);
+    //         //     console.log(userData)
+    //         //     for (var data in userData) {
+    //         //         array.push(userData[data])
+    //         //     }
+    //         //     console.log(array)
+    //         //     // array.map((user, i) => {
+    //         //     //     console.log(userUID[i])
+    //         //     //     console.log(user._id)
+    //         //     //     if (user._id == userUID[i]) {
+
+    //         //     //         console.log(user._id)
+    //         //     //         userArray.push(user);
+    //         //     //     }
+    //         //     // })
+    //         //     // console.log(userArray)
+
+    //         // })
+    //     }
+    // }
+
     static getAllCircles(uid) {
         return (dispatch) => {
             let id = uid
             console.log(id)
             firebase.database().ref(`/Circles/`).on('value', (data) => {
                 let userData = data.val();
-
 
                 console.log(userData)
                 let array = [];
@@ -53,10 +100,11 @@ export class CircleMiddleware {
                 }
                 console.log(array)
                 let CirclesForthisUser = []
-                array.map((u, i) => {
-                    return u.members.map((mem, k) => {
-                        if (uid == mem.uid) {
-                            CirclesForthisUser.push(u);
+                array.map((user, i) => {
+                    console.log(user)
+                    user.members.map((mem, k) => {
+                        if (id == mem.uid) {
+                            CirclesForthisUser.push(user);
                         }
                     })
                 })

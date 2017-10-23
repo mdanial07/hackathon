@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 import {
     Container, Header, Content, List, Right, Left, ListItem,
     Item, Label, Input, Switch, Title, Thumbnail, Text, Separator,
-    Body, TabHeading, Button
+    Body, TabHeading, Button, Footer
 } from 'native-base';
 import { View, AsyncStorage, Image, StyleSheet, TextInput } from "react-native"
 import { connect } from 'react-redux';
 import { LoginMiddleware } from '../../store/middlewares/loginMiddleware';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 
@@ -51,7 +51,11 @@ class ProfileDetails extends Component {
     }
 
     back = () => {
-        this.props.navigation.navigate('profile')
+        this.props.navigation.navigate('circles')
+    }
+
+    logout = () => {
+        this.props.logoutUser(this.props)
     }
 
     render() {
@@ -59,7 +63,9 @@ class ProfileDetails extends Component {
             <Container>
                 <Header style={{ backgroundColor: '#05b8cc' }}>
                     <Left>
-                        <Icon style={{ color: '#fff' }} size={30} name='chevron-left' onPress={this.back} />
+                        <Button transparent onPress={this.back}>
+                            <Icon style={{ color: '#fff' }} size={20} name='arrow-left'  />
+                        </Button>
                     </Left>
                     <Body >
                         {
@@ -71,13 +77,15 @@ class ProfileDetails extends Component {
                         }
                     </Body>
                     <Right>
-                        <Icon style={{ color: '#fff' }} size={30} name='check' />
+                        <Button transparent>
+                            <Icon style={{ color: '#fff' }} size={20} name='check' />
+                        </Button>
                     </Right>
                 </Header>
 
                 <Content>
-                        <Thumbnail style={{ alignSelf: 'center', borderWidth: 2, borderColor: '#05b8cc', marginTop: '5%', marginBottom: '2%' }} large size={80} source={{ uri: 'https://scontent.fkhi9-1.fna.fbcdn.net/v/t1.0-9/21432894_1192746394162794_1096900880755878585_n.jpg?oh=ef1d58816ee341804cbcd9f366528413&oe=5A5314D1' }} />
-                
+                    <Thumbnail style={{ alignSelf: 'center', borderWidth: 2, borderColor: '#05b8cc', marginTop: '5%', marginBottom: '2%' }} large source={{ uri: 'https://scontent.fkhi9-1.fna.fbcdn.net/v/t1.0-9/21432894_1192746394162794_1096900880755878585_n.jpg?oh=ef1d58816ee341804cbcd9f366528413&oe=5A5314D1' }} />
+
                     <Text style={{ alignSelf: 'center', marginBottom: '3%' }}>Change Photo</Text>
                     {
                         this.state.Users.map((user, i) => {
@@ -96,13 +104,21 @@ class ProfileDetails extends Component {
                                 </Item>
                                 <Item floatingLabel style={{ marginTop: '4%' }}>
                                     <Label>Password</Label>
-                                    <Input type="password" value={user.pass} />
+                                    <Input
+                                        type="password"
+                                        value={user.pass}
+                                        secureTextEntry={true}
+                                    />
                                 </Item>
                             </View>
                             )
                         })
                     }
                 </Content>
+
+                <Footer style={{ backgroundColor: '#CD0000', marginTop: 15 }}>
+                    <Text style={{ color: '#fff', marginTop: 15 }} onPress={this.logout}> Log Out </Text>
+                </Footer>
             </Container>
         )
     }

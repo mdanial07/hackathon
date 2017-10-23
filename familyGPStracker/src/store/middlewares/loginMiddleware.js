@@ -21,7 +21,7 @@ export class LoginMiddleware {
                         buttonText: 'Okay'
                     });
 
-                    props.navigation.navigate('maps')
+                    props.navigation.navigate('circles')
                 })
                 .catch(function (error) {
                     // Handle Errors here.
@@ -63,15 +63,7 @@ export class LoginMiddleware {
                     console.log(currentEmail, doc.email)
                     if (doc.email === currentEmail) {
                         return (
-                            sortData = {
-                                _id: doc._id,
-                                email: doc.email,
-                                pass: doc.pass,
-                                fname: doc.fname,
-                                sname: doc.sname,
-                                latitude: doc.latitude,
-                                longitude: doc.longitude,
-                            }
+                            sortData = doc
                         )
                     }
                 })

@@ -120,6 +120,7 @@ class Signup extends Component {
 
     render() {
         console.log(this.props.signup)
+        console.log(this.state.latitude);
         return (
             <Image source={require('../Images/bg1.jpg')} style={styles.bgImage}>
                 <Container>

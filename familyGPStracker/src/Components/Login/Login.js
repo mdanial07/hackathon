@@ -32,18 +32,37 @@ class Login extends Component {
     }
     componentWillMount() {
         console.disableYellowBox = true;
-
+        navigator.geolocation.getCurrentPosition((pos) => {
+            console.log(pos.coords)
+            var crd = pos.coords;
+            console.log(crd.latitude)
+            console.log(crd.longitude)
+            this.setState({
+                latitude: crd.latitude,
+                longitude: crd.longitude
+            })
+        },
+            (err) => {
+                alert('check your network conectivity and location or gps')
+            }),
+            () => {
+                var options = {
+                    enableHighAccuracy: false,
+                    timeout: 5000,
+                    maximumAge: 1000
+                };
+            }
         AsyncStorage.getItem('familytracker', (err, result) => {
             if (result !== null) {
                 let data = JSON.parse(result);
                 var email = data.email;
                 var pass = data.pass;
                 console.log(email, pass)
-                // firebase.auth().signInWithEmailAndPassword(email, pass)
-                //     .then((user) => {
-                //         console.log("dadad")
-                //         this.props.navigation.navigate('maps')
-                //     })
+                firebase.auth().signInWithEmailAndPassword(email, pass)
+                    .then((user) => {
+                        console.log("dadad")
+                        this.props.navigation.navigate('circles')
+                    })
             }
         });
 

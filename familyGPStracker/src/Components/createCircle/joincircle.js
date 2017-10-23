@@ -3,12 +3,13 @@ import { View, AsyncStorage, Image, StyleSheet, TextInput, Text } from "react-na
 import { connect } from 'react-redux';
 import {
     Container, Content, Header, List, Thumbnail, ListItem,
-    Left, Body, Right, Button, Toast, Icon, Title, Form, Item,
+    Left, Body, Right, Button, Toast, Title, Form, Item,
     Input, Label
 } from 'native-base';
 import axios from 'axios'
 import { CircleMiddleware } from '../../store/middlewares/circlesMiddleware';
 import * as firebase from 'firebase'
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 
@@ -72,7 +73,7 @@ class JoinCircle extends Component {
         //     console.log(data)
         // })
     }
-    allCircles = () => {
+    back = () => {
         this.props.navigation.navigate('circles');
     }
 
@@ -82,7 +83,7 @@ class JoinCircle extends Component {
                 <Header style={{ backgroundColor: '#05b8cc' }}>
                     <Left>
                         <Button transparent>
-                            <Icon name='arrow-back' onPress={this.allCircles} />
+                            <Icon style={{ color: '#fff' }} size={20} name='arrow-left' onPress={this.back} />
                         </Button>
                     </Left>
                     <Body>

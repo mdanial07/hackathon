@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Header, Content, List, Right, Left, Button, Title, ListItem, Switch, Thumbnail, Text, Separator, Body, TabHeading, } from 'native-base';
+import { Container, Header, Content, List, Right, Left, Button, Fab, Title, ListItem, Switch, Thumbnail, Text, Separator, Body, TabHeading, } from 'native-base';
 import { View, AsyncStorage, Image, StyleSheet, TextInput } from "react-native"
 import { connect } from 'react-redux';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -17,20 +17,15 @@ function mapStateToProps(state) {
     }
 }
 
-
 class Circles extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { email: '', pass: '', user: [], showCircles: false }
+        this.state = { email: '', pass: '', user: [], showCircles: false, active: false }
     }
     static navigationOptions = {
-        title: 'Login Page',
         header: null,
     }
-
-
-
 
     componentWillMount() {
         console.disableYellowBox = true;
@@ -38,50 +33,34 @@ class Circles extends Component {
             if (result !== null) {
                 let data = JSON.parse(result);
                 var uid = data._id;
+                console.log(uid)
                 this.props.getAllCircles(uid);
             }
         });
     }
 
-    maps = () => {
-        this.props.navigation.navigate('maps')
-    }
-
     circleDetail = () => {
         this.props.navigation.navigate('circleDetails')
     }
-
     createCircle = () => {
         this.props.navigation.navigate('createcircle')
     }
-
     joinCircle = () => {
         this.props.navigation.navigate('joincircle')
     }
-
+    profile = () => {
+        this.props.navigation.navigate('profiledetails')
+    }
 
     currentCircle = (key, name, keyV, mainKey) => {
-
-        // this.props.circles[key].members.map((value, k) => {
-        //     return (console.log(value))
-        // })
-
         let array = this.props.circles[key]
         let keys = key
         let ownername = name
         let keyValue = keyV
-
-
-        // array.members.map((a, i) => {
-        //     console.log(a)
-        // })
-        // console.log(array.members)
-
         this.props.navigation.navigate('circleDetails', { keys, ownername, keyValue, mainKey })
 
         console.log(keys, name, keyValue)
         console.log(array)
-
     }
 
 
@@ -91,15 +70,18 @@ class Circles extends Component {
         return (
             <Container>
                 <Header style={{ backgroundColor: '#05b8cc' }}>
-                    <View>
-                        <Icon style={{ color: '#fff', marginLeft: 5, marginTop: 15, }} size={30} name='caret-left' onPress={this.maps} />
-                    </View>
+                    <Left>
+                    </Left>
                     <Body >
                         <Title style={{ marginLeft: 10, alignSelf: 'center' }}>All Circles </Title>
                     </Body>
+                    <Right>
+                        <Button transparent onPress={this.profile}>
+                            <Icon style={{ color: '#fff' }} size={25} name="gear" />
+                        </Button>
+                    </Right>
                 </Header>
-                <View >
-
+                <Content style={{ backgroundColor: '#fff', flex: 1 }}>
                     <ListItem avatar style={{ marginLeft: 0 }} onPress={this.joinCircle}>
                         <Left>
                             <Icon style={{ marginLeft: 10, color: '#CD0000' }} size={20} name='plus-circle' />
@@ -119,55 +101,42 @@ class Circles extends Component {
                     {
                         this.props.circles.map((value, k) => {
                             return (
-                                <ListItem onPress={() => this.currentCircle(k, value.name, value.key, value.mainKey)} avatar style={{ marginLeft: 0 }} key={k}>
-                                    <Left>
-                                        <Icon style={{ marginLeft: 10 }} size={20} name='user-o' />
-                                    </Left>
-                                    <Body>
-                                        <Text style={{ color: '#999', fontSize: 16 }}>{value.name}</Text>
-                                    </Body>
-                                    <Right>
-                                        <Icon size={15} name="gear" />
-                                    </Right>
-                                </ListItem>
+                                <View key={k}>
+                                    <ListItem onPress={() => this.currentCircle(k, value.name, value.key, value.mainKey)} avatar style={{ marginLeft: 0 }} >
+                                        <Left>
+                                            <Icon style={{ marginLeft: 10 }} size={20} name='user-o' />
+                                        </Left>
+                                        <Body>
+                                            <Text style={{ color: '#999', fontSize: 16 }}>{value.name}</Text>
+                                        </Body>
+                                        <Right>
+                                            <Icon style={{ marginTop: '5%' }} size={15} name="gear" />
+                                        </Right>
+                                    </ListItem>
+                                </View>
 
                             )
                         })
                     }
-                    {/* <ListItem avatar style={{ marginLeft: 0 }} onPress={this.circleDetail}>
-                        <Left>
-                            <Icon style={{ marginLeft: 10 }} size={20} name='user-o' />
-                        </Left>
-                        <Body>
-                            <Text style={{ color: '#999', fontSize: 16 }}>University Circle</Text>
-                        </Body>
-                        <Right>
-                            <Icon size={15} name="gear" />
-                        </Right>
-                    </ListItem>
-                    <ListItem avatar style={{ marginLeft: 0 }}>
-                        <Left>
-                            <Icon style={{ marginLeft: 10 }} size={20} name='user-o' />
-                        </Left>
-                        <Body>
-                            <Text style={{ color: '#999', fontSize: 16 }}>Family Circle</Text>
-                        </Body>
-                        <Right>
-                            <Icon size={15} name="gear" />
-                        </Right>
-                    </ListItem>
-                    <ListItem avatar style={{ marginLeft: 0 }}>
-                        <Left>
-                            <Icon style={{ marginLeft: 10 }} size={20} name='user-o' />
-                        </Left>
-                        <Body>
-                            <Text style={{ color: '#999', fontSize: 16 }}>Friends Circle</Text>
-                        </Body>
-                        <Right>
-                            <Icon size={15} name="gear" />
-                        </Right>
-                    </ListItem> */}
-                </View>
+                </Content>
+                {/* <View style={{ flex: 1 }}>
+                    <Fab
+                        active={this.state.active}
+                        direction="up"
+                        containerStyle={{ size: 25 }}
+                        style={{ backgroundColor: '#5067FF', }}
+                        position="bottomRight"
+                        onPress={() => this.setState({ active: !this.state.active })}>
+                        <Icon name="share" />
+                        <Button style={{ backgroundColor: '#34A34F' }}>
+                            <Icon name="logo-whatsapp" />
+                        </Button>
+                        <Button style={{ backgroundColor: '#3B5998' }}>
+                            <Icon name="logo-facebook" />
+                        </Button>
+
+                    </Fab>
+                </View> */}
             </Container>
         )
     }

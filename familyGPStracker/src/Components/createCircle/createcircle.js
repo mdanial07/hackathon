@@ -3,9 +3,10 @@ import { View, AsyncStorage, Image, StyleSheet, TextInput, Text } from "react-na
 import { connect } from 'react-redux';
 import {
     Container, Content, Header, List, Thumbnail, ListItem,
-    Left, Body, Right, Button, Toast, Icon, Title, Form, Item,
+    Left, Body, Right, Button, Toast, Title, Form, Item,
     Input, Label
 } from 'native-base';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import axios from 'axios'
 import { CircleMiddleware } from '../../store/middlewares/circlesMiddleware';
 
@@ -61,17 +62,21 @@ class CreateCircle extends Component {
             })
         }
         else {
-            let uid = this.state.uid;
-            let groupCode = uid.slice(0, 6);
-            uid = {
+            // let groupCode = uid.slice(0, 6);
+            let uid = {
                 // code: groupCode,
                 uid: this.state.uid,
                 name: this.state.name,
             }
+            let chat = {
+                uid: this.state.uid,
+                msg: 'Thanks for being a part of US :)'
+            }
             let userCircle = {
                 uname: this.state.familyTapp.fname,
                 name: this.state.circleName,
-                members: [uid]
+                members: [uid],
+                chatbox: [chat]
             }
             console.log(userCircle)
 
@@ -84,7 +89,7 @@ class CreateCircle extends Component {
         }
     }
 
-    allCircles = () => {
+    back = () => {
         this.props.navigation.navigate('circles');
     }
 
@@ -93,8 +98,8 @@ class CreateCircle extends Component {
             <Container >
                 <Header style={{ backgroundColor: '#05b8cc' }}>
                     <Left>
-                        <Button transparent>
-                            <Icon name='arrow-back' onPress={this.allCircles} />
+                        <Button transparent onPress={this.back}>
+                            <Icon style={{ color: '#fff' }} size={20} name='arrow-left'  />
                         </Button>
                     </Left>
                     <Body>

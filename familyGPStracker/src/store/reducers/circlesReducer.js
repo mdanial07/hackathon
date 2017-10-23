@@ -1,6 +1,6 @@
 import CirclesAction from '../actions/circlesAction';
 
-const initialState = { circles: [] }
+const initialState = { circles: [], }
 
 export default function CirclesReducer(state = initialState, action) {
     // const { patients } = action;
@@ -9,6 +9,7 @@ export default function CirclesReducer(state = initialState, action) {
             console.log(action.circles);
             return Object.assign({}, state, { circles: action.circles })
         // return state = { ...state, patients }
+        
         default:
             return state;
     }

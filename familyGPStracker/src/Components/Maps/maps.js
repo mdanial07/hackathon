@@ -23,7 +23,7 @@ class Maps extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { latitude: '', longitude: '' }
+        this.state = { latitude: 0, longitude: 0 }
     }
     static navigationOptions = {
         header: null,
@@ -71,6 +71,10 @@ class Maps extends Component {
         // })
     }
 
+    ProfileDetails = () => {
+        this.props.navigation.navigate('profiledetails')
+    }
+
 
     Circles = () => {
         this.props.navigation.navigate('circles')
@@ -81,7 +85,7 @@ class Maps extends Component {
             <Container style={styles.container}>
                 <Header style={{ backgroundColor: '#05b8cc' }}>
                     <View>
-                        <Icon style={{ color: '#fff', marginTop: 15, }} size={25} name='navicon' />
+                        <Icon style={{ color: '#fff', marginTop: 15, }} size={25} name='navicon' onPress={this.ProfileDetails} />
                     </View>
                     <Body style={{ marginRight: 10, alignItems: 'center' }}>
                         <Title style={{ alignSelf: 'center' }}>Family GPS Tracker </Title>
